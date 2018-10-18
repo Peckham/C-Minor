@@ -1,0 +1,50 @@
+.header {
+  color: rgb(255,255,255);
+  font-family: 'Russo One', sans-serif;
+  font-size: 40pt;
+}
+
+.bgColor {
+  background-color: rgb(115,123,230);
+}
+
+.bodyText {
+  font-family: 'Nova Flat', cursive;
+}
+
+.white {
+	color: rgb(255,255,255);
+}
+
+.black {
+	color: rgb(0,0,0);
+}
+
+.picTooLarge {
+	width: 100%;
+}
+
+.mediaTN {
+	height: 64px;
+	width: 64px;
+}
+
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 20px;
+}
+
+.carousel-inner > .item > img {
+  min-width: 100%;
+}
