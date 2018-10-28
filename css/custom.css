@@ -2,6 +2,12 @@
   color: rgb(255,255,255);
   font-family: 'Russo One', sans-serif;
   font-size: 40pt;
+  padding-top: 32px;
+}
+
+.header2 {
+  font-family: 'Nova Flat', cursive;
+  font-size: 32px;
 }
 
 .bgColor {
@@ -10,6 +16,15 @@
 
 .bodyText {
   font-family: 'Nova Flat', cursive;
+}
+
+.linkImage {
+  text-decoration: none;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 20px;
 }
 
 .white {
