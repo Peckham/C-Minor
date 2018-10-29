@@ -3,6 +3,8 @@
   font-family: 'Russo One', sans-serif;
   font-size: 40pt;
   padding-top: 32px;
+  display: block;
+  padding-left: 5%;
 }
 
 .header2 {
@@ -29,6 +31,10 @@
 
 .white {
 	color: rgb(255,255,255);
+}
+
+.lightGray {
+  color: rgb(215,215,215);
 }
 
 .black {
@@ -62,4 +68,27 @@ body {
 
 .carousel-inner > .item > img {
   min-width: 100%;
+}
+
+/* PROFILE
+------------------------------------------ */
+
+.profile-left {
+  width: 20%;
+  padding-left: 7%;
+  padding-right: 5%;
+  float: left;
+  display: block;
+}
+
+.profile-right {
+  width: 68%;
+  float: right;
+  display: block;
+  border-radius: 8px;
+  background-color: rgb(215,215,215);
+}
+
+.profile-picture {
+  margin-bottom: 16px;
 }
