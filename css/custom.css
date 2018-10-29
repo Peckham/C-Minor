@@ -41,6 +41,15 @@
 	color: rgb(0,0,0);
 }
 
+.center {
+  margin:auto;
+  width:50%;
+}
+
+.inline {
+  display:inline-block;
+}
+
 .picTooLarge {
 	max-width: 100%;
 }
@@ -118,4 +127,46 @@ body {
   padding-top:48px;
   padding-left:16px;
   padding-bottom:16px;
+}
+
+/* MENTORSHIP
+---------------------------------------------- */
+
+.mentorLeftButton {
+  background-color:rgb(215,215,215);
+  color:rgb(115,123,230);
+  display:inline-block;
+  margin-left:5%;
+  margin-top:10%;
+  height:40%;
+  width:40%;
+  border-radius: 8px;
+}
+
+.mentorRightButton {
+  background-color:rgb(215,215,215);
+  color:rgb(115,123,230);
+  float:right;
+  display:inline-block;
+  margin-left:5%;
+  margin-right:5%;
+  margin-top:10%;
+  height:40%;
+  width:40%;
+  border-radius: 8px;
+}
+
+.mentorshipMenu {
+  padding-bottom:30%;
+  margin-left:5%;
+  margin-top:20px;
+  width: 85%;
+  display:block;
+  border-radius: 8px;
+  background-color: rgb(215,215,215);
+}
+
+.switch {
+  margin-left:5%;
+  background-color:rgb(80,80,80);
 }
