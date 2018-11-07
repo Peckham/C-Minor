@@ -170,3 +170,76 @@ body {
   margin-left:5%;
   background-color:rgb(80,80,80);
 }
+
+/* EVENTS
+------------------------------------------ */
+
+.searchEvents {
+  padding-top:48px;
+  font-family: 'Nova Flat', cursive;
+  margin-left:16px;
+}
+
+.searchEventsBar {
+  margin-left:16px;
+  margin-right:16px;
+}
+
+.active-cyan-3 input[type=text] {
+    border: 1px solid rgb(115,123,230);
+    box-shadow: 0 0 0 1px rgb(115,123,230);
+}
+
+.eventsCarouselCol {
+  padding-left:17%;
+  width:60%;
+  display:inline-block;
+}
+
+.eventsCarousel {
+  padding-top:48px;
+}
+
+.example-1 {
+position: relative;
+overflow-y: scroll;
+height: 640px;
+width: 35%;
+margin-top: 32px;
+margin-right:2%;
+float:right;
+display:inline-block;
+}
+
+.scrollbar-cyan::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px;
+}
+
+.scrollbar-cyan::-webkit-scrollbar {
+width: 12px;
+background-color: rgb(115,123,230); 
+}
+
+.scrollbar-cyan::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: rgb(115,123,230); 
+}
+
+.upcomingEvents {
+  font-family: 'Russo One', sans-serif;
+  font-size: 48px;
+  padding-bottom:8px;
+}
+
+.eventTitleCol {
+  float:left;
+  width:40%;
+}
+
+.timeCol {
+  float:right;
+  width:30%;
+}

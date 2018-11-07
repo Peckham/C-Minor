@@ -37,31 +37,26 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-      <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-      <link rel="stylesheet" href="http://www.jqueryui.com/resources/demos/style.css"> 
   </head>
 
   <body class="bgColor">
 
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="">C-Minor</a>
+        <a class="navbar-brand" href="#">C-Minor</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="profile.html">Profile</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="events.html">Events</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="events.html">Events<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="forum.html">Forum</a>
@@ -74,17 +69,23 @@
       </nav>
     </header>
 
-
-      <div class="page-header">
-        <h1 class="header">C-Minor</h1>
+    <div class="sidenav white">
+      <p class="searchEvents">Search Events/Clubs</p>
+      <div class="active-cyan-4 mb-4 searchEventsBar">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
       </div>
+      <p class="bodyText option"><a class="white" href="#">Near You</a></p>
+      <p class="bodyText option"><a class="white" href="#">Diversity Events</a></p>
+      <p class="bodyText option"><a class="white" href="#">Workshops</a></p>
+      <p class="bodyText option"><a class="white" href="#">Speakers</a></p>
+      <p class="bodyText option"><a class="white" href="#">Hackathons</a></p>
+      <p class="bodyText option"><a class="white" href="#">See All Upcoming Events</a></p>
+      <p class="bodyText option"><a class="white" href="#">See All Organizations</a></p>
+    </div>
 
-    <div class="container">
-      <!--<div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>-->
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="eventsCarouselCol">
+    <div id="myCarousel" class="carousel slide eventsCarousel" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -96,8 +97,7 @@
             <div class="container">
               <div class="carousel-caption text-left">
                 <h1>Black Girls Code</h1>
-                <p>Join us for our upcoming general meeting on 11/11 in room 1100!</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">RSVP on Facebook</a></p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
               </div>
             </div>
           </div>
@@ -106,8 +106,7 @@
             <div class="container">
               <div class="carousel-caption text-left">
                 <h1>Black Googler Network</h1>
-                <p>Meet and chat with Google Engineers just like you at Google Shanghai on 11/23</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">RSVP by 11/12</a></p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
               </div>
             </div>
           </div>
@@ -115,9 +114,8 @@
             <img class="third-slide" src="images/TempCarousel2.jpg" alt="Grace Hopper">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>Grace Hopper</h1>
-                <p>The biggest conference for Women in Computer Science.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Apply for a Travel Grant Today!</a></p>
+                <h1>AnitaB</h1>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
               </div>
             </div>
           </div>
@@ -131,26 +129,60 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-
-      <p class="lead header2 white">
-        Upcoming Events and Highlights
+      <p class="upcomingEvents white">
+        Spotlight Organizations
       </p>
+    </div>
 
-      <div class="well well-sm bodyText white">
-        C Minor is a website created to bring minorities in Computer Science together! <br>
-        We hope you will find our website useful. :) <br>
-        Currently a Work in Progress.
+    <div class="card example-1 square scrollbar-cyan bordered-cyan">
+      <div class="card-body">
+        <h1 class="upcomingEvents"><strong>Upcoming Events</strong></h1>
+        <div class="bodyText">
+          <div class="eventTitleCol">
+            <p>C4G (Code4Good) Meeting</p>
+            <p>Hip Hop Dance Class</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+            <p>Filler</p>
+          </div>
+          <div class="timeCol">
+            <p>Room 211 11/14 6:00pm</p>
+            <p>Room 808 11/14 7:40pm</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+            <p>Room Time</p>
+          </div>
+        </div>
       </div>
-  
-  	  <br><br>
-	  <h2 class="lead bodyText white">Contact Us</h2>
-	  <p class="linkImage"><a href="https://www.linkedin.com/in/tiaratan"><img src="images/linkedIn.png" alt="LinkedIn" class="linkImage"/></a></p>
-	  <p class="linkImage"><a href="https://github.com/TiaraIsTan"><img src="images/github.svg" alt="GitHub" class="linkImage"/></a></p>
-	  <p class="linkImage"><a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook" class="linkImage"/></a></p>
-	  <p class="linkImage"><a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram" class="linkImage"/></a></p>
-
-    </div><!-- /.container -->
-
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
