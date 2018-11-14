@@ -48,29 +48,31 @@ try {
     }
 </style>
 
-<h2>List Of Users</h2>
+<div class="page-header header">
+    <h1>Mentor Catalogue</h1>
+</div>
 
-<table>
-    <thead>
-    <tr>
-        <!-- <th>#</th> -->
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email Address</th>
-        <th>Contact</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($result as $row) : ?>
+<div class="bodyText">
+    <table>
+        <thead class="tableHeader">
         <tr>
-            <!-- <td><?php echo escape($row["id"]); ?></td> -->
-            <td><?php echo escape($row["fname"]); ?></td>
-            <td><?php echo escape($row["lname"]); ?></td>
-            <td><?php echo escape($row["address"]); ?></td>
-            <td><?php echo escape($row["contact"]); ?></td>
+            <!-- <th>#</th> -->
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Contact</th>
         </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table>
-
-<button class="b" href="index.php">Back to home</button>
+        </thead>
+        <tbody>
+        <?php foreach ($result as $row) : ?>
+            <tr>
+                <!-- <td><?php echo escape($row["id"]); ?></td> -->
+                <td><?php echo escape($row["fname"]); ?></td>
+                <td><?php echo escape($row["lname"]); ?></td>
+                <td><?php echo escape($row["address"]); ?></td>
+                <td><?php echo escape($row["contact"]); ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

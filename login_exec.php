@@ -64,7 +64,7 @@ if($result) {
         $_SESSION['interests'] = $member['interests'];
         $_SESSION['typeof'] = $member['typeof'];
         session_write_close();
-        header("location: home.php");
+        header("location: profile.php");
         exit();
     }else {
         //Login failed

@@ -73,8 +73,8 @@
                     <a class="nav-link" href="mentor_catalogue.php">Mentor Catalogue</a>
                 </li>
             </ul>
-            <button><a href = "login.php">Login</a></button>
-            <button><a href="register.php">Sign Up</a></button>
+            <a href="login.php" class="btn btn-secondary btn-sm" role="button">Log In</a>
+            <a href="register.php" class="btn btn-secondary btn-sm" role="button">Register</a>
         </div>
     </nav>
 </header>
