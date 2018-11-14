@@ -256,4 +256,9 @@ background-color: rgb(115,123,230);
 
 .logInHeader {
   margin: 0 auto;
+  color: rgb(255,255,255);
+  font-family: 'Russo One', sans-serif;
+  font-size: 40pt;
+  padding-top: 32px;
+  display: block;
 }

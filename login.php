@@ -20,21 +20,17 @@ unset($_SESSION['SESS_LAST_NAME']);
 <div class="page-header header logInHeader">
   <h1>Log In</h1>
 </div>
-
-<div class="center inline bodyText">
-    <form name="loginform" action="login_exec.php" method="post">
-        <table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
-            <tr>
-                <td colspan="2">
-                    <!--the code bellow is used to display the message of the input validation-->
-                    <?php
-                    if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
-                        echo '<ul class="err">';
-                        foreach($_SESSION['ERRMSG_ARR'] as $msg) {
-                            echo '<li>',$msg,'</li>';
-                        }
-                        echo '</ul>';
-                        unset($_SESSION['ERRMSG_ARR']);
+    
+<form name="loginform" action="login_exec.php" method="post">
+    <table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
+        <tr>
+            <td colspan="2">
+                <!--the code bellow is used to display the message of the input validation-->
+                <?php
+                if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+                    echo '<ul class="err">';
+                    foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+                        echo '<li>',$msg,'</li>';
                     }
                     echo '</ul>';
                     unset($_SESSION['ERRMSG_ARR']);
@@ -44,7 +40,6 @@ unset($_SESSION['SESS_LAST_NAME']);
         </tr>
         <br>
         <br>
-        <p class = 'a'>Log In</p>
 
         <br>
         <br>
@@ -62,6 +57,6 @@ unset($_SESSION['SESS_LAST_NAME']);
         </tr>
     </table>
 </form>
-</div>
+
 </body>
 </html>
