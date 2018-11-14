@@ -16,6 +16,7 @@
         var g=document.forms["reg"]["password"].value;
         var h=document.forms["reg"]["interests"].value;
         var i=document.forms["reg"]["major"].value;
+        var j=document.forms["reg"]["typeof"].value;
         if ((a==null || a=="") && (b==null || b=="") && (d==null || d=="") && (e==null || e==""))
         {
             alert("All Field must be filled out");
@@ -112,7 +113,15 @@
             <td><div align="right">Biography:</div></td>
             <td><input type="text" name="bio" /></td>
         </tr>
-
+        <tr>
+            <td>
+                <div class = 'a'>
+                    <label for="type"></label>
+                    <input type="radio" name="typeof" value="Mentor">Mentor<br>
+                    <input type="radio" name="typeof" value="Mentee">Mentee<br>
+                </div>
+            </td>
+        </tr>
         <tr>
             <td><div align="right"></div></td>
             <td><input name="submit" type="submit" value="Submit" /></td>

@@ -62,6 +62,7 @@ if($result) {
         $_SESSION['bio'] = $member['bio'];
         $_SESSION['major'] = $member['major'];
         $_SESSION['interests'] = $member['interests'];
+        $_SESSION['typeof'] = $member['typeof'];
         session_write_close();
         header("location: home.php");
         exit();
