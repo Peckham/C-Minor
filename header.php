@@ -75,6 +75,7 @@
             </ul>
             <button><a href = "login.php">Login</a></button>
             <button><a href="register.php">Sign Up</a></button>
+            <button><a href="logout.php">Logout</a></button>
         </div>
     </nav>
 </header>
