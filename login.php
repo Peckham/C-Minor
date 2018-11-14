@@ -62,5 +62,6 @@ unset($_SESSION['SESS_LAST_NAME']);
         </tr>
     </table>
 </form>
+</div>
 </body>
 </html>
