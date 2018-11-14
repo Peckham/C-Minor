@@ -8,7 +8,12 @@ unset($_SESSION['SESS_FIRST_NAME']);
 unset($_SESSION['SESS_LAST_NAME']);
 ?>
 <html>
-
+<style>
+    .a {
+        position: relative;
+        left: 50%;
+    }
+</style>
 <body>
 <?php include "header.php"; ?>
 <form name="loginform" action="login_exec.php" method="post">
@@ -28,6 +33,12 @@ unset($_SESSION['SESS_LAST_NAME']);
                 ?>
             </td>
         </tr>
+        <br>
+        <br>
+        <p class = 'a'>Log In</p>
+
+        <br>
+        <br>
         <tr>
             <td width="116"><div align="right">Username</div></td>
             <td width="177"><input name="username" type="text" /></td>
@@ -42,6 +53,6 @@ unset($_SESSION['SESS_LAST_NAME']);
         </tr>
     </table>
 </form>
-<a href="register.php"><button>Register</button></a>
+
 </body>
 </html>

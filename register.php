@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .bu{
+        position: relative;
+        left: 30px;
+    }
+</style>
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
@@ -115,8 +121,8 @@
         </tr>
         <tr>
             <td>
-                <div class = 'a'>
-                    <label for="type"></label>
+                <div align="left">
+
                     <input type="radio" name="typeof" value="Mentor">Mentor<br>
                     <input type="radio" name="typeof" value="Mentee">Mentee<br>
                 </div>
@@ -129,6 +135,6 @@
     </table>
 </form>
 
-<a href="login.php"><button>Login</button></a>
+<a class = 'bu' href="login.php"><button>Login</button></a>
 </body>
 </html>
