@@ -61,15 +61,20 @@
                     <a class="nav-link" href="profile.php">Profile</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="events.php">Events</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="forum.php">Forum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mentorship.php">Mentorship</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mentor_catalogue.php">Mentor Catalogue</a>
+                </li>
             </ul>
             <button><a href = "login.php">Login</a></button>
             <button><a href="register.php">Sign Up</a></button>
-            <button><a href="allusers.php">List All Users</a></button>
         </div>
     </nav>
 </header>
