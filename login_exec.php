@@ -59,6 +59,9 @@ if($result) {
         $_SESSION['fname'] = $member['fname'];
         $_SESSION['lname'] = $member['lname'];
         $_SESSION['contact'] = $member['contact'];
+        $_SESSION['bio'] = $member['bio'];
+        $_SESSION['major'] = $member['major'];
+        $_SESSION['interests'] = $member['interests'];
         session_write_close();
         header("location: home.php");
         exit();

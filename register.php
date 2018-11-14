@@ -9,11 +9,13 @@
     {
         var a=document.forms["reg"]["fname"].value;
         var b=document.forms["reg"]["lname"].value;
-
+        var c=document.forms["reg"]["bio"].value;
         var d=document.forms["reg"]["address"].value;
         var e=document.forms["reg"]["contact"].value;
         var f=document.forms["reg"]["username"].value;
         var g=document.forms["reg"]["password"].value;
+        var h=document.forms["reg"]["interests"].value;
+        var i=document.forms["reg"]["major"].value;
         if ((a==null || a=="") && (b==null || b=="") && (d==null || d=="") && (e==null || e==""))
         {
             alert("All Field must be filled out");
@@ -54,7 +56,7 @@
 </script>
 
 <body>
-
+<?php include "header.php"; ?>
 <form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post">
     <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
         <tr>
@@ -99,12 +101,25 @@
             <td><input type="text" name="password" /></td>
         </tr>
         <tr>
+            <td><div align="right">Major:</div></td>
+            <td><input type="text" name="major" /></td>
+        </tr>
+        <tr>
+            <td><div align="right">Interests:</div></td>
+            <td><input type="text" name="interests" /></td>
+        </tr>
+        <tr>
+            <td><div align="right">Biography:</div></td>
+            <td><input type="text" name="bio" /></td>
+        </tr>
+
+        <tr>
             <td><div align="right"></div></td>
             <td><input name="submit" type="submit" value="Submit" /></td>
         </tr>
     </table>
 </form>
 
-<a href="login.php">Login</a>
+<a href="login.php"><button>Login</button></a>
 </body>
 </html>

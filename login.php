@@ -1,6 +1,7 @@
 <?php
 //Start session
 session_start();
+
 //Unset the variables stored in session
 unset($_SESSION['SESS_MEMBER_ID']);
 unset($_SESSION['SESS_FIRST_NAME']);
@@ -9,6 +10,7 @@ unset($_SESSION['SESS_LAST_NAME']);
 <html>
 
 <body>
+<?php include "header.php"; ?>
 <form name="loginform" action="login_exec.php" method="post">
     <table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
         <tr>

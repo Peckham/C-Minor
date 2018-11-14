@@ -67,8 +67,8 @@
                     <a class="nav-link" href="mentorship.php">Mentorship</a>
                 </li>
             </ul>
-            <button><a href = "create.php">Sign Up</a></button>
-            <button><a href="allusers.php">List of Users</a></button>
+            <button><a href = "login.php">Login</a></button>
+            <button><a href="register.php">Sign Up</a></button>
         </div>
     </nav>
 </header>
