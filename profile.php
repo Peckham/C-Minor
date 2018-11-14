@@ -70,9 +70,39 @@ if (isset($_SESSION['SESS_MEMBER_ID'])) {
 } else {
     ?>
     <html>
+    <style>
+        .p1 {
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            left: 300px;
+            color: white;
+        }
+        .p1 span{
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate(0,0);
+            }
+            100% {
+                transform: translate(-100%, 0)
+            }
+        }
+
+    </style>
     <body>
-    You Are not Logged in
+    <div>
+    <span class="p1">You Are not Logged in</span>
+    </div>
     </body>
     </html>
     <?php
 }
+
+
+
