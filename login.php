@@ -8,7 +8,12 @@ unset($_SESSION['SESS_FIRST_NAME']);
 unset($_SESSION['SESS_LAST_NAME']);
 ?>
 <html>
-
+<style>
+    .a {
+        position: relative;
+        left: 50%;
+    }
+</style>
 <body>
 <?php include "header.php"; ?>
 
@@ -31,24 +36,31 @@ unset($_SESSION['SESS_LAST_NAME']);
                         echo '</ul>';
                         unset($_SESSION['ERRMSG_ARR']);
                     }
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <td width="116"><div align="right" class="white">Username</div></td>
-                <td width="177"><input name="username" type="text" /></td>
-            </tr>
-            <tr>
-                <td><div align="right" class="white">Password</div></td>
-                <td><input name="password" type="text" /></td>
-            </tr>
-            <tr>
-                <td><div align="right"></div></td>
-                <td><input name="" type="submit" value="Log In" class="btn btn-secondary btn-sm"/></td>
-            </tr>
-        </table>
-    </form>
-    <a href="register.php" class="btn btn-secondary btn-sm" role="button">Register</a>
-</div>
+                    echo '</ul>';
+                    unset($_SESSION['ERRMSG_ARR']);
+                }
+                ?>
+            </td>
+        </tr>
+        <br>
+        <br>
+        <p class = 'a'>Log In</p>
+
+        <br>
+        <br>
+        <tr>
+            <td width="116"><div align="right" class="white">Username</div></td>
+            <td width="177"><input name="username" type="text" /></td>
+        </tr>
+        <tr>
+            <td><div align="right" class="white">Password</div></td>
+            <td><input name="password" type="text" /></td>
+        </tr>
+        <tr>
+            <td><div align="right"></div></td>
+            <td><input name="" type="submit" value="Log In" class="btn btn-secondary btn-sm"/></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

@@ -28,17 +28,25 @@ try {
 <?php require "header.php"; ?>
 
 <style>
+
+    #header2 {
+        position: relative;
+        left: 5%;
+    }
+
     table {
-        width: 50%;
+        width: 80%;
+        position: relative;
+        left: 5%;
     }
 
     th {
-        width: 50%;
-        padding: 10px;
+
+
     }
 
     td {
-        width: 50%;
+
         padding: 10px;
     }
 

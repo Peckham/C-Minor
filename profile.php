@@ -23,7 +23,10 @@ $bio = $_SESSION['bio'];
 $interests = $_SESSION['interests'];
 
 include "header.php";
+
+if (isset($_SESSION['SESS_MEMBER_ID'])) {
 ?>
+
 
 <html lang="en">
 
@@ -61,3 +64,15 @@ include "header.php";
     <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+
+    <?php
+
+} else {
+    ?>
+    <html>
+    <body>
+    You Are not Logged in
+    </body>
+    </html>
+    <?php
+}
