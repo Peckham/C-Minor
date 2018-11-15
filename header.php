@@ -67,7 +67,7 @@ if (isset($_SESSION['SESS_MEMBER_ID'])) {
                     <a class="nav-link" href="events.php">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="forum.php">Forum</a>
+                    <a class="nav-link" href="/phpBB3">Forum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mentorship.php">Mentorship</a>
@@ -151,7 +151,7 @@ if (isset($_SESSION['SESS_MEMBER_ID'])) {
                         <a class="nav-link" href="events.php">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="forum.php">Forum</a>
+                        <a class="nav-link" href="/phpBB3">Forum</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="mentorship.php">Mentorship</a>
