@@ -71,33 +71,56 @@ if (isset($_SESSION['SESS_MEMBER_ID'])) {
     ?>
     <html>
     <style>
-        .p1 {
-            margin: 0 auto;
-            white-space: nowrap;
+        .example1 {
+            height: 80%;
             overflow: hidden;
-            position: absolute;
-            left: 300px;
+            position: relative;
+            top: 100px;
+        }
+        .example1 h3 {
+            font-size: 8em;
+            font-family: Impact;
             color: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 100px;
+            text-align: center;
+            /* Starting position */
+            -moz-transform:translateX(100%);
+            -webkit-transform:translateX(100%);
+            transform:translateX(100%);
+            /* Apply animation to this element */
+            -moz-animation: example1 5s linear infinite;
+            -webkit-animation: example1 5s linear infinite;
+            animation: example1 5s linear infinite;
         }
-        .p1 span{
-            display: inline-block;
-            padding-left: 100%;
-            animation: marquee 10s linear infinite;
+        /* Move it (define the animation) */
+        @-moz-keyframes example1 {
+            0%   { -moz-transform: translateX(100%); }
+            100% { -moz-transform: translateX(-100%); }
         }
-
-        @keyframes marquee {
-            0% {
-                transform: translate(0,0);
+        @-webkit-keyframes example1 {
+            0%   { -webkit-transform: translateX(100%); }
+            100% { -webkit-transform: translateX(-100%); }
+        }
+        @keyframes example1 {
+            0%   {
+                -moz-transform: translateX(100%); /* Firefox bug fix */
+                -webkit-transform: translateX(100%); /* Firefox bug fix */
+                transform: translateX(100%);
             }
             100% {
-                transform: translate(-100%, 0)
+                -moz-transform: translateX(-100%); /* Firefox bug fix */
+                -webkit-transform: translateX(-100%); /* Firefox bug fix */
+                transform: translateX(-100%);
             }
         }
-
     </style>
     <body>
-    <div>
-    <span class="p1">You Are not Logged in</span>
+    <div class = 'example1'>
+    <h3>YOU ARE NOT LOGGED IN                      YOU ARE NOT LOGGED IN YOU ARE NOT LOGGED IN YOU ARE NOT LOGGED IN</h3>
     </div>
     </body>
     </html>
