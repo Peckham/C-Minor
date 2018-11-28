@@ -22,6 +22,7 @@ $major = $_SESSION['major'];
 $bio = $_SESSION['bio'];
 $interests = $_SESSION['interests'];
 
+
 include "header.php";
 ?>
 
@@ -43,7 +44,7 @@ include "header.php";
       if (isset($_SESSION['SESS_MEMBER_ID'])) {
         ?>
         <br>
-        <p class="bodyText option"><a class="white" href="#">Add Event</a></p>
+        <p class="bodyText option"><a class="white" href="add_event.php">Add Event</a></p>
         <p class="bodyText option"><a class="white" href="#">Add Organization</a></p>
         <p class="bodyText option"><a class="white" href="#">Apply for Spotlight</a></p>
 
@@ -103,13 +104,50 @@ include "header.php";
       </p>
     </div>
 
+
+    <?php
+    /**
+     * Created by PhpStorm.
+     * User: Hudson
+     * Date: 10/29/18
+     * Time: 5:28 PM
+     */
+    session_start();
+
+    try {
+        require "config.php";
+        require "common.php";
+
+        $connection = new PDO($dsn, $username, $password, $options);
+
+        $sql = "SELECT * FROM events";
+
+        $statement = $connection->prepare($sql);
+        $statement->execute();
+
+        $result = $statement->fetchAll();
+
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+    ?>
+    
     <div class="card example-1 square scrollbar-cyan bordered-cyan">
       <div class="card-body">
         <h1 class="upcomingEvents"><strong>Upcoming Events</strong></h1>
         <div class="bodyText">
           <div class="eventTitleCol">
-            <p>C4G (Code4Good) Meeting</p>
-            <p>Hip Hop Dance Class</p>
+              <?php foreach ($result as $row) : ?>
+                  <tr>
+                      <!-- <td><?php echo escape($row["id"]); ?></td> -->
+                      <td><?php echo escape($row["event_name"]); ?></td>
+                      <td><?php echo escape($row["organization"]); ?></td>
+                      <br>
+                      <br>
+                      <br>
+                  </tr>
+              <?php endforeach; ?>
+
             <p>Filler</p>
             <p>Filler</p>
             <p>Filler</p>
@@ -129,8 +167,18 @@ include "header.php";
             <p>Filler</p>
           </div>
           <div class="timeCol">
-            <p>Room 211 11/14 6:00pm</p>
-            <p>Room 808 11/14 7:40pm</p>
+              <?php foreach ($result as $row) : ?>
+                  <tr>
+                      <!-- <td><?php echo escape($row["id"]); ?></td> -->
+                      <td><?php echo escape($row["event_date"]); ?></td>
+                      <td><?php echo escape($row["event_time"]); ?></td>
+                      <br>
+                      <td>Room: <?php echo escape($row["location"]); ?></td>
+                      <br>
+
+                  </tr>
+              <?php endforeach; ?>
+
             <p>Room Time</p>
             <p>Room Time</p>
             <p>Room Time</p>
