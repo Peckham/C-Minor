@@ -201,14 +201,14 @@ body {
 }
 
 .example-1 {
-position: relative;
-overflow-y: scroll;
-height: 640px;
-width: 35%;
-margin-top: 32px;
-margin-right:2%;
-float:right;
-display:inline-block;
+  position: relative;
+  overflow-y: scroll;
+  height: 640px;
+  width: 35%;
+  margin-top: 32px;
+  margin-right:2%;
+  float:right;
+  display:inline-block;
 }
 
 .scrollbar-cyan::-webkit-scrollbar-track {
