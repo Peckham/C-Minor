@@ -13,53 +13,46 @@
 <script type="text/javascript">
     function validateForm()
     {
-        return True;
+        var a=document.forms["reg"]["event_name"].value;
+        var b=document.forms["reg"]["organization"].value;
+        var c=document.forms["reg"]["event_date"].value;
+        var d=document.forms["reg"]["event_time"].value;
+        var e=document.forms["reg"]["location"].value;
+        var f=document.forms["reg"]["contact"].value;
 
-
-        var a=document.forms["reg"]["fname"].value;
-        var b=document.forms["reg"]["lname"].value;
-        var c=document.forms["reg"]["bio"].value;
-        var d=document.forms["reg"]["address"].value;
-        var e=document.forms["reg"]["contact"].value;
-        var f=document.forms["reg"]["username"].value;
-        var g=document.forms["reg"]["password"].value;
-        var h=document.forms["reg"]["interests"].value;
-        var i=document.forms["reg"]["major"].value;
-        var j=document.forms["reg"]["typeof"].value;
-        if ((a==null || a=="") && (b==null || b=="") && (d==null || d=="") && (e==null || e==""))
+        if ((a==null || a=="") && (b==null || b=="") && (c==null || c=="") && (d==null || d=="") && (e==null || e==""))
         {
-            alert("All Field must be filled out");
+            alert("All Fields must be filled out");
             return false;
         }
         if (a==null || a=="")
         {
-            alert("First name must be filled out");
+            alert("Event Name must be filled out");
             return false;
         }
         if (b==null || b=="")
         {
-            alert("Last name must be filled out");
+            alert("Organization Name must be filled out");
             return false;
         }
-
+        if (c==null || c=="")
+        {
+            alert("Event Date must be filled out");
+            return false;
+        }
         if (d==null || d=="")
         {
-            alert("address must be filled out");
+            alert("Event Time must be filled out");
             return false;
         }
         if (e==null || e=="")
         {
-            alert("contact must be filled out");
+            alert("Location must be filled out");
             return false;
         }
         if (f==null || f=="")
         {
-            alert("username must be filled out");
-            return false;
-        }
-        if (g==null || g=="")
-        {
-            alert("password must be filled out");
+            alert("Contact must be filled out");
             return false;
         }
     }
@@ -67,7 +60,7 @@
 
 <body>
 <?php include "header.php"; ?>
-<form name="reg" action="event_exec.php" method="post">
+<form name="reg" action="event_exec.php" onsubmit="return validateForm()" method="post">
     <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
         <tr>
             <td colspan="2">
