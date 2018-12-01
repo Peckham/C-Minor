@@ -40,7 +40,7 @@ if (isset($_SESSION['SESS_MEMBER_ID'])) {
         <img class="rounded-circle profile-picture" src="images/TempProfile.jpg" alt="Tavish Profile Image" width="140" height="140">
         <h2><?php echo $fname; ?> <?php echo $lname; ?></h2>
         <p><?php echo $interests; ?></p>
-        <p><a class="btn btn-secondary" href="#" role="button">Edit Profile &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="update.php?id=<?php echo $id; ?>" role="button">Edit Profile &raquo;</a></p>
       </div>
 
       <div class="profile-right">
