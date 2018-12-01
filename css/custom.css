@@ -67,6 +67,14 @@ body {
   text-align: center;
 }
 
+/* HEADER
+-----------------------------------------------------*/
+.dropdown-menu-right {
+    right:0;
+    left:auto;
+}
+
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 

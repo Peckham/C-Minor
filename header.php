@@ -60,9 +60,6 @@ session_start();
                     <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profile.php">Profile</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="events.php">Events</a>
                 </li>
                 <li class="nav-item">
@@ -91,7 +88,15 @@ session_start();
             <?php
             if (isset($_SESSION['SESS_MEMBER_ID'])) {?>
                 
-                <button><a href="logout.php">Logout</a></button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php echo $_SESSION['fname'] ?>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button"><a href="profile.php" class="black">My Account</a></button>
+                    <button class="dropdown-item" type="button"><a href="logout.php" class="black">Log Out</a></button>
+                  </div>
+                </div>
 
             <?php
             } else {?>

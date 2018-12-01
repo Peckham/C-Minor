@@ -25,7 +25,7 @@ try {
 }
 ?>
 
-<?php require "header.php"; ?>
+<?php include "header.php"; ?>
 
 <style>
 
