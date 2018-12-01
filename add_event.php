@@ -11,51 +11,24 @@
     <title>Add An Event</title>
 </head>
 <script type="text/javascript">
+
     function validateForm()
     {
-        var a=document.forms["reg"]["event_name"].value;
-        var b=document.forms["reg"]["organization"].value;
-        var c=document.forms["reg"]["event_date"].value;
-        var d=document.forms["reg"]["event_time"].value;
-        var e=document.forms["reg"]["location"].value;
-        var f=document.forms["reg"]["contact"].value;
+        var fields = ["event_name", "organization", "event_date", "event_time", "location", "contact"]
 
-        if ((a==null || a=="") && (b==null || b=="") && (c==null || c=="") && (d==null || d=="") && (e==null || e==""))
-        {
-            alert("All Fields must be filled out");
-            return false;
+        var i, l = fields.length;
+        var fieldname;
+        for (i = 0; i < l; i++) {
+            fieldname = fields[i];
+            if (document.forms["reg"][fieldname].value === "") {
+                alert(fieldname + " can not be empty");
+                return false;
+            }
         }
-        if (a==null || a=="")
-        {
-            alert("Event Name must be filled out");
-            return false;
-        }
-        if (b==null || b=="")
-        {
-            alert("Organization Name must be filled out");
-            return false;
-        }
-        if (c==null || c=="")
-        {
-            alert("Event Date must be filled out");
-            return false;
-        }
-        if (d==null || d=="")
-        {
-            alert("Event Time must be filled out");
-            return false;
-        }
-        if (e==null || e=="")
-        {
-            alert("Location must be filled out");
-            return false;
-        }
-        if (f==null || f=="")
-        {
-            alert("Contact must be filled out");
-            return false;
-        }
+        return true;
     }
+
+
 </script>
 
 <body>
@@ -80,28 +53,28 @@
         </tr>
         <tr>
             <td width="95"><div align="right">Event Name:</div></td>
-            <td width="171"><input type="text" name="name" /></td>
+            <td width="171"><input type="text" name="name" required /></td>
         </tr>
         <tr>
             <td><div align="right">Organization:</div></td>
-            <td><input type="text" name="organization" /></td>
+            <td><input type="text" name="organization" required /></td>
         </tr>
 
         <tr>
             <td><div align="right">Date:</div></td>
-            <td><input type="date" name="event_date" /></td>
+            <td><input type="date" name="event_date" required /></td>
         </tr>
         <tr>
             <td><div align="right">Time:</div></td>
-            <td><input type="time" name="event_time" /></td>
+            <td><input type="time" name="event_time" required /></td>
         </tr>
         <tr>
             <td><div align="right">Location:</div></td>
-            <td><input type="text" name="location" /></td>
+            <td><input type="text" name="location" required /></td>
         </tr>
         <tr>
             <td><div align="right">Contact:</div></td>
-            <td><input type="text" name="contact" /></td>
+            <td><input type="text" name="contact" required /></td>
         </tr>
 
         <tr>
