@@ -1,11 +1,17 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Hudson
+ * Date: 12/1/18
+ * Time: 1:51 PM
+ */
 
-$host       = "localhost";
-$username   = "root";
-$password   = "root";
-$dbname     = "Registration"; // will use later
-$dsn        = "mysql:host=$host;dbname=$dbname"; // will use later
-$options    = array(
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-);
+error_reporting(E_ALL & ~E_NOTICE);
 
+// DATABASE SETTINGS
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'Registration');
+define('DB_CHARSET', 'utf8');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'root');
+?>

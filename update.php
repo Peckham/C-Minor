@@ -9,6 +9,9 @@
 require "config.php";
 require "common.php";
 
+
+include "header.php";
+
 if (isset($_POST['submit'])) {
     try {
         $connection = new PDO($dsn, $username, $password, $options);
@@ -63,7 +66,83 @@ if (isset($_GET['id'])) {
     <blockquote><?php echo escape($_POST['firstname']); ?> successfully updated.</blockquote>
 <?php endif; ?>
 
-<h2>Edit a user</h2>
+<div align="center">
+    <?php
+        if (isset($_GET['remarks']) && $_GET['remarks']=='imagesuccess')
+        {
+            echo 'Image Upload Success';
+        }
+    ?>
+</div>
+
+<body style="margin-left:2%">
+    <h1>Edit Profile</h1>
+
+    <h2>Image Upload</h2>
+
+    <form action="upload_exec.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="upFile" id="upFile">
+        <input type="submit" name="submit" value="Upload Image">
+    </form>
+
+    <h2>Edit Information</h2>
+
+    <form method = "post" action = "<?php $_PHP_SELF ?>">
+      <table width = "600" border =" 0" cellspacing = "1" 
+         cellpadding = "2">
+      
+         <tr>
+            <td width = "100">First Name</td>
+            <td><input name = "fname" type = "text" 
+               id = "fname"></td>
+         </tr>
+      
+         <tr>
+            <td width = "100">Last Name</td>
+            <td><input name = "lname" type = "text" 
+               id = "lname"></td>
+         </tr>
+      
+         <tr>
+            <td width = "100">Address</td>
+            <td><input name = "address" type = "text"
+                id = "address"></td>
+         </tr>
+
+         <tr>
+            <td width = "100">Contact No.</td>
+            <td><input name = "contact" type = "text"
+                id = "contact"></td>
+         </tr>
+
+         <tr>
+            <td width = "100">Major</td>
+            <td><input name = "major" type = "text"
+                id = "major"></td>
+         </tr>
+
+         <tr>
+            <td width = "100">Interests</td>
+            <td><textarea rows = "4" cols = "50" name = "interests" type = "text"
+                id = "interests"></textarea></td>
+         </tr>
+
+         <tr>
+            <td width = "100">Biography</td>
+            <td><textarea rows = "6" cols = "50" name = "bio" type = "text"
+                id = "bio"></textarea></td>
+         </tr>
+      
+         <tr>
+            <td width = "100"></td>
+            <td>
+               <input name = "update" type = "submit" 
+                  id = "update" value = "Update">
+            </td>
+         </tr>
+      
+      </table>
+   </form>
 
 <form method="post">
     <?php foreach ($user as $key => $value) : ?>
@@ -74,3 +153,5 @@ if (isset($_GET['id'])) {
 </form>
 
 <a href="index.php">Back to home</a>
+
+</body>

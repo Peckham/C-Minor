@@ -12,7 +12,7 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 $major=$_POST['major'];
 $interests=$_POST['interests'];
-$typeof = $_POST['typeof'];
+$typeof=$_POST['typeof'];
 
 
 mysqli_query($bd, "INSERT INTO member(fname, lname, bio, address, contact, picture, username, password, major, interests, typeof)VALUES('$fname', '$lname', '$bio', '$address', '$contact', '$pic', '$username', '$password', '$major', '$interests', '$typeof')");
