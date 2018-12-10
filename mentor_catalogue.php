@@ -5,7 +5,6 @@
  * Date: 10/29/18
  * Time: 5:28 PM
  */
-session_start();
 
 try {
     require "config.php";

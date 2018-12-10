@@ -1,16 +1,22 @@
 <?php
 
+?>
+
+<?php
+
 /**
  * Use an HTML form to edit an entry in the
  * users table.
  *
  */
 
-require "config.php";
-require "common.php";
+//require "config.php";
+//require "common.php";
 
 
-include "header.php";
+
+
+
 
 //if (isset($_POST['submit'])) {
 //    try {
@@ -61,23 +67,26 @@ include "header.php";
 //    echo "Something went wrong!";
 //    exit;
 //}
+
+
 ?>
 
+<!---->
+<?php //if (isset($_POST['submit']) && $statement) : ?>
+<!--    <blockquote>--><?php //echo escape($_POST['fname']); ?><!-- successfully updated.</blockquote>-->
+<?php //endif; ?>
 
-<?php if (isset($_POST['submit']) && $statement) : ?>
-    <blockquote><?php echo escape($_POST['fname']); ?> successfully updated.</blockquote>
-<?php endif; ?>
-
-<div align="center">
-    <?php
-        if (isset($_GET['remarks']) && $_GET['remarks']=='imagesuccess')
-        {
-            echo 'Image Upload Success';
-        }
-    ?>
-</div>
+<!--<div align="center">-->
+<!--    --><?php
+//        if (isset($_GET['remarks']) && $_GET['remarks']=='imagesuccess')
+//        {
+//            echo 'Image Upload Success';
+//        }
+//    ?>
+<!--</div>-->
 
 <body style="margin-left:2%">
+<?php include "header.php"; ?>
     <h1>Edit Profile</h1>
 
     <h2>Image Upload</h2>
@@ -262,6 +271,8 @@ include "header.php";
 <!--    <input type="submit" name="submit" value="Submit">-->
 <!--</form>-->
 
-<a href="index.php">Back to home</a>
+    <button><a href="profile.php">Back to Profile</a></button>
+
+
 
 </body>
