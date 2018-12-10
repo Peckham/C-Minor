@@ -20,7 +20,7 @@ $lname = $_SESSION['lname'];
 $email = $_SESSION['email'];
 $type = $_SESSION['typeof'];
 $image = $_SESSION['profile_img'];
-
+mysqli_close($conn);
 
 
 //$result = $conn->query("SELECT profile_img FROM profiles WHERE id = $id");

@@ -24,6 +24,5 @@ mysqli_multi_query($bd, "INSERT INTO members(username, password, fname, lname, e
 header("location: login.php?remarks=success");
 
 
-
-mysqli_close($con);
+mysqli_close($bd);
 ?>
