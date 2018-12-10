@@ -89,7 +89,7 @@ include "header.php";
 
     <h2>Edit Information</h2>
 
-    <form method = "post" action = "<?php $_PHP_SELF ?>">
+    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
       <table width = "600" border =" 0" cellspacing = "1"
          cellpadding = "2">
 
@@ -97,62 +97,170 @@ include "header.php";
             <td width = "100">First Name</td>
             <td><input name = "fname" type = "text"
                id = "fname"></td>
-         </tr>
-
-         <tr>
-            <td width = "100">Last Name</td>
-            <td><input name = "lname" type = "text"
-               id = "lname"></td>
-         </tr>
-
-         <tr>
-            <td width = "100">Email</td>
-            <td><input name = "address" type = "text"
-                id = "address"></td>
-         </tr>
-
-         <tr>
-            <td width = "100">Website</td>
-            <td><input name = "contact" type = "text"
-                id = "contact"></td>
-         </tr>
-
-         <tr>
-            <td width = "100">Biography</td>
-            <td><textarea rows = "6" cols = "50" name = "bio" type = "text"
-                id = "bio"></textarea></td>
-         </tr>
-
-         <tr>
-            <td width = "100">Major</td>
-            <td><input name = "major" type = "text"
-                id = "major"></td>
-         </tr>
-
-         <tr>
-            <td width = "100">Interests</td>
-            <td><textarea rows = "4" cols = "50" name = "interests" type = "text"
-                id = "interests"></textarea></td>
-         </tr>
-
-         <tr>
-            <td width = "100"></td>
-            <td>
-               <input name = "update" type = "submit"
-                  id = "update" value = "Update">
-            </td>
+         <td width = "100"></td>
+         <td>
+             <input name = "update" type = "submit"
+                    id = "update" value = "Update">
+         </td>
          </tr>
 
       </table>
-   </form>
+    </form>
+    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+        <table width = "600" border =" 0" cellspacing = "1"
+               cellpadding = "2">
 
-<form method="post">
-    <?php foreach ($user as $key => $value) : ?>
-        <label for="<?php echo $key; ?>"><?php echo ucfirst($key); ?></label>
-        <input type="text" name="<?php echo $key; ?>" id="<?php echo $key; ?>" value="<?php echo escape($value); ?>" <?php echo ($key === 'id' ? 'readonly' : null); ?>>
-    <?php endforeach; ?>
-    <input type="submit" name="submit" value="Submit">
-</form>
+            <tr>
+                <td width = "100">Last Name</td>
+                <td><input name = "lname" type = "text"
+                           id = "lname"></td>
+                <td width = "100"></td>
+                <td>
+                    <input name = "update" type = "submit"
+                           id = "update" value = "Update">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+        <table width = "600" border =" 0" cellspacing = "1"
+               cellpadding = "2">
+
+            <tr>
+                <td width = "100">E-mail</td>
+                <td><input name = "email" type = "text"
+                           id = "lname"></td>
+                <td width = "100"></td>
+                <td>
+                    <input name = "update" type = "submit"
+                           id = "update" value = "Update">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+        <table width = "600" border =" 0" cellspacing = "1"
+               cellpadding = "2">
+
+            <tr>
+                <td width = "100">Website</td>
+                <td><input name = "contact" type = "text"
+                           id = "lname"></td>
+                <td width = "100"></td>
+                <td>
+                    <input name = "update" type = "submit"
+                           id = "update" value = "Update">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+        <table width = "600" border =" 0" cellspacing = "1"
+               cellpadding = "2">
+
+            <tr>
+                <td width = "100">Biography</td>
+                <td><textarea rows = "6" cols = "50" name = "bio" type = "text"
+                              id = "bio"></textarea></td>
+                <td width = "100"></td>
+                <td>
+                    <input name = "update" type = "submit"
+                           id = "update" value = "Update">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+        <table width = "600" border =" 0" cellspacing = "1"
+               cellpadding = "2">
+
+            <tr>
+                <td width = "100">Major</td>
+                <td><input name = "major" type = "text"</td>
+                <td width = "100"></td>
+                <td>
+                    <input name = "update" type = "submit"
+                           id = "update" value = "Update">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+        <table width = "600" border =" 0" cellspacing = "1"
+               cellpadding = "2">
+
+            <tr>
+                <td width = "100">Interests</td>
+                <td><textarea rows = "4" cols = "50" name = "interests" type = "text"
+                              id = "interests"></textarea></td>
+                <td width = "100"></td>
+                <td>
+                    <input name = "update" type = "submit"
+                           id = "update" value = "Update">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+<!---->
+<!--         <tr>-->
+<!--            <td width = "100">Last Name</td>-->
+<!--            <td><input name = "lname" type = "text"-->
+<!--               id = "lname"></td>-->
+<!--         </tr>-->
+<!---->
+<!--         <tr>-->
+<!--            <td width = "100">Email</td>-->
+<!--            <td><input name = "email" type = "text"-->
+<!--                id = "address"></td>-->
+<!--         </tr>-->
+<!---->
+<!--         <tr>-->
+<!--            <td width = "100">Website</td>-->
+<!--            <td><input name = "contact" type = "text"-->
+<!--                id = "contact"></td>-->
+<!--         </tr>-->
+<!---->
+<!--         <tr>-->
+<!--            <td width = "100">Biography</td>-->
+<!--            <td><textarea rows = "6" cols = "50" name = "bio" type = "text"-->
+<!--                id = "bio"></textarea></td>-->
+<!--         </tr>-->
+<!---->
+<!--         <tr>-->
+<!--            <td width = "100">Major</td>-->
+<!--            <td><input name = "major" type = "text"-->
+<!--                id = "major"></td>-->
+<!--         </tr>-->
+<!---->
+<!--         <tr>-->
+<!--            <td width = "100">Interests</td>-->
+<!--            <td><textarea rows = "4" cols = "50" name = "interests" type = "text"-->
+<!--                id = "interests"></textarea></td>-->
+<!--         </tr>-->
+<!---->
+<!--         <tr>-->
+<!--            <td width = "100"></td>-->
+<!--            <td>-->
+<!--               <input name = "update" type = "submit"-->
+<!--                  id = "update" value = "Update">-->
+<!--            </td>-->
+<!--         </tr>-->
+
+
+<!--<form method="post">-->
+<!--    --><?php //foreach ($user as $key => $value) : ?>
+<!--        <label for="--><?php //echo $key; ?><!--">--><?php //echo ucfirst($key); ?><!--</label>-->
+<!--        <input type="text" name="--><?php //echo $key; ?><!--" id="--><?php //echo $key; ?><!--" value="--><?php //echo escape($value); ?><!--" --><?php //echo ($key === 'id' ? 'readonly' : null); ?><!-->-->
+<!--    --><?php //endforeach; ?>
+<!--    <input type="submit" name="submit" value="Submit">-->
+<!--</form>-->
 
 <a href="index.php">Back to home</a>
 

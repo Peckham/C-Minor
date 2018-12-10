@@ -3,6 +3,9 @@ session_start();
 ?>
 
 <?php
+
+include('connection.php');
+
 $mysql_hostname = "localhost";
 $mysql_user = "root";
 $mysql_password = "root";
@@ -15,12 +18,25 @@ $sql = "SELECT * FROM profiles where mem_id='$id'";
 //$statement = $conn -> prepare($sql);
 //$statement->execute();
 //$r = $statement->fetch();
-$fname = $_SESSION['fname'];
-$lname = $_SESSION['lname'];
-$email = $_SESSION['email'];
-$type = $_SESSION['typeof'];
-$image = $_SESSION['profile_img'];
-mysqli_close($conn);
+
+$result = mysqli_query($bd, $sql);
+
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+        $fname = $row['fname'];
+        $lname = $row['lname'];
+        $email = $row['email'];
+        $type = $row['typeof'];
+        $image = $row['profile_img'];
+    };
+};
+
+//$fname = $_SESSION['fname'];
+//$lname = $_SESSION['lname'];
+//$email = $_SESSION['email'];
+//$type = $_SESSION['typeof'];
+//$image = $_SESSION['profile_img'];
+
 
 
 //$result = $conn->query("SELECT profile_img FROM profiles WHERE id = $id");
