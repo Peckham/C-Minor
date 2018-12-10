@@ -11,10 +11,10 @@ session_start();
 include('connection.php');
 
 
-$name=$_POST['name'];
+$event_name=$_POST['event_name'];
 $organization=$_POST['organization'];
-$date=$_POST['event_date'];
-$time=$_POST['event_time'];
+$event_date=$_POST['event_date'];
+$event_time=$_POST['event_time'];
 $location=$_POST['location'];
 $contact=$_POST['contact'];
 

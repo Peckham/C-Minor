@@ -12,7 +12,8 @@ $pdo = new PDO(
 );
 
 /* [FETCH IMAGE] */
-$stmt = $pdo->prepare("SELECT `data` FROM `upload` WHERE `name`=?");
+$stmt = $pdo->prepare("SELECT `profile_img` 
+	FROM `profiles` WHERE `profile_img_name`=?");
 $stmt->execute(array($_GET['f']));
 $img = $stmt->fetch();
 

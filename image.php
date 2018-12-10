@@ -3,12 +3,12 @@
 $mysql_hostname = "localhost";
 $mysql_user = "root";
 $mysql_password = "root";
-$mysql_database = "registration";
+$mysql_database = "database";
 $prefix = "";
 
 $conn = new mysqli($mysql_hostname, $mysql_user, $mysql_password, $mysql_database);
 $id=$_SESSION['SESS_MEMBER_ID'];
-$sql = "SELECT * FROM upload where 1";
+$sql = "SELECT * FROM profiles where 1";
 $statement = $conn -> prepare($sql);
 $statement->execute();
 $r = $statement->fetch();

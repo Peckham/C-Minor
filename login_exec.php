@@ -44,7 +44,7 @@ if($errflag) {
 }
 
 //Create query
-$qry="SELECT * FROM member WHERE username='$username' AND password='$password'";
+$qry="SELECT * FROM members WHERE username='$username' AND password='$password'";
 $result=mysqli_query($bd, $qry);
 
 //Check whether the query was successful or not
@@ -58,10 +58,7 @@ if($result) {
         $_SESSION['SESS_LAST_NAME'] = $member['password'];
         $_SESSION['fname'] = $member['fname'];
         $_SESSION['lname'] = $member['lname'];
-        $_SESSION['contact'] = $member['contact'];
-        $_SESSION['bio'] = $member['bio'];
-        $_SESSION['major'] = $member['major'];
-        $_SESSION['interests'] = $member['interests'];
+        $_SESSION['email'] = $member['email'];
         $_SESSION['typeof'] = $member['typeof'];
         session_write_close();
         header("location: profile.php");

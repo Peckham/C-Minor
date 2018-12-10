@@ -13,7 +13,7 @@ try {
 
     $connection = new PDO($dsn, $username, $password, $options);
 
-    $sql = "SELECT fname, lname, address, contact FROM member WHERE typeof = 'mentor'";
+    $sql = "SELECT fname, lname, email FROM member WHERE typeof = 'mentor'";
 
     $statement = $connection->prepare($sql);
     $statement->execute();
@@ -68,7 +68,6 @@ try {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email Address</th>
-            <th>Contact</th>
         </tr>
         </thead>
         <tbody>
@@ -77,8 +76,7 @@ try {
                 <!-- <td><?php echo escape($row["id"]); ?></td> -->
                 <td><?php echo escape($row["fname"]); ?></td>
                 <td><?php echo escape($row["lname"]); ?></td>
-                <td><?php echo escape($row["address"]); ?></td>
-                <td><?php echo escape($row["contact"]); ?></td>
+                <td><?php echo escape($row["email"]); ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

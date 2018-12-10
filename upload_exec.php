@@ -3,7 +3,7 @@
 $mysql_hostname = "localhost";
 $mysql_user = "root";
 $mysql_password = "root";
-$mysql_database = "registration";
+$mysql_database = "database";
 $prefix = "";
 
 $conn = new mysqli($mysql_hostname, $mysql_user, $mysql_password, $mysql_database);
@@ -28,7 +28,23 @@ $pdo = new PDO(
 /* [INSERT IMAGE] */
 // DO YOUR ERROR CHECKING HERE IF YOU WANT
 try {
-    $stmt = $pdo->prepare("INSERT INTO `upload` (`name`, `data`) VALUES (?, ?)");
+	// $mem_id = $_POST['mem_id'];
+ //    $imagename = $_POST['imagename'];
+ //    $image = $_POST['image'];
+    
+ //    $sql = "UPDATE member ". "SET imagename = $imagename ". "SET image = $image ".
+ //       "WHERE mem_id = $mem_id" ;
+ //    mysql_select_db('registration');
+ //    $retval = mysql_query( $sql, $conn );
+    
+ //    if(! $retval ) {
+ //       die('Could not update data: ' . mysql_error());
+ //    }
+ //    echo "Updated data successfully\n";
+
+
+
+    $stmt = $pdo->prepare("INSERT INTO `profiles` (`profile_img_name`, `profile_img`) VALUES (?, ?)");
     $stmt->execute([$_FILES["upFile"]["name"], file_get_contents($_FILES['upFile']['tmp_name'])]);
 } catch (Exception $ex) {
     echo "ERROR - " . $ex->getMessage();
