@@ -11,9 +11,9 @@ try {
     require "config.php";
     require "common.php";
 
-    $connection = new PDO($dsn, $username, $password, $options);
+    $connection = new PDO('mysql:host=localhost;dbname=Database', root, root);
 
-    $sql = "SELECT fname, lname, email FROM member WHERE typeof = 'mentor'";
+    $sql = "SELECT fname, lname, email FROM members WHERE typeof = 'Mentor'";
 
     $statement = $connection->prepare($sql);
     $statement->execute();
