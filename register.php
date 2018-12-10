@@ -105,6 +105,15 @@
         </tr>
         <tr>
             <td>
+                Select image to upload:
+            </td>
+            <td>
+                <input type="file" name="image"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <div align="left">
 
                     <input type="radio" name="typeof" value="Mentor">Mentor<br>
