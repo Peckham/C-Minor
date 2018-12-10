@@ -44,25 +44,37 @@ if($errflag) {
 }
 
 //Create query
-$qry="SELECT * FROM members WHERE username='$username' AND password='$password'";
+$salt = getenv('WEBSITE_SALT');
+
+$qry="SELECT * FROM members WHERE username='$username'";
 $result=mysqli_query($bd, $qry);
+
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+        $hash = $row['password'];
+    };
+};
 
 //Check whether the query was successful or not
 if($result) {
-    if(mysqli_num_rows($result) > 0) {
-        //Login Successful
-        session_regenerate_id();
-        $member = mysqli_fetch_assoc($result);
-        $_SESSION['SESS_MEMBER_ID'] = $member['mem_id'];
-        $_SESSION['SESS_FIRST_NAME'] = $member['username'];
-        $_SESSION['SESS_LAST_NAME'] = $member['password'];
-        $_SESSION['fname'] = $member['fname'];
-        $_SESSION['lname'] = $member['lname'];
-        $_SESSION['email'] = $member['email'];
-        $_SESSION['typeof'] = $member['typeof'];
-        session_write_close();
-        header("location: profile.php");
-        exit();
+    if(password_verify($password, $hash)){
+        $qry="SELECT * FROM members WHERE username='$username'";
+        $result=mysqli_query($bd, $qry);
+        if(mysqli_num_rows($result) > 0) {
+            //Login Successful
+            session_regenerate_id();
+            $member = mysqli_fetch_assoc($result);
+            $_SESSION['SESS_MEMBER_ID'] = $member['mem_id'];
+            $_SESSION['SESS_FIRST_NAME'] = $member['username'];
+            $_SESSION['SESS_LAST_NAME'] = $member['password'];
+            $_SESSION['fname'] = $member['fname'];
+            $_SESSION['lname'] = $member['lname'];
+            $_SESSION['email'] = $member['email'];
+            $_SESSION['typeof'] = $member['typeof'];
+            session_write_close();
+            header("location: profile.php");
+            exit();
+    }
     }else {
         //Login failed
         $errmsg_arr[] = 'user name and password not found';

@@ -3,8 +3,10 @@ session_start();
 
 include('connection.php');
 
+
+$salt = getenv('WEBSITE_SALT');
 $username=$_POST['username'];
-$password=$_POST['password'];
+$password= $_POST['password'];
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
 $email=$_POST['email'];
@@ -13,6 +15,12 @@ $typeof=$_POST['typeof'];
 $imgname = $_FILES['image']['name'];
 $image = $_FILES['image']['tmp_name'];
 $imgContent = addslashes(file_get_contents($image));
+
+$options = [
+    'salt' => $salt
+];
+
+$password = password_hash($password, PASSWORD_DEFAULT, $options);
 
 $sql = "INSERT INTO members(username, password, fname, lname, email, typeof)VALUES('$username', '$password', '$fname', '$lname', '$email', '$typeof')";
 $sql .= "INSERT INTO profiles(fname, lname, email, typeof)VALUES('$fname', '$lname', '$email', '$typeof')";
