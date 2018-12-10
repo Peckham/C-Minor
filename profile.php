@@ -6,19 +6,32 @@ session_start();
 $mysql_hostname = "localhost";
 $mysql_user = "root";
 $mysql_password = "root";
-$mysql_database = "database";
+$mysql_database = "Database";
 $prefix = "";
 
 $conn = new mysqli($mysql_hostname, $mysql_user, $mysql_password, $mysql_database);
 $id=$_SESSION['SESS_MEMBER_ID'];
 $sql = "SELECT * FROM profiles where mem_id='$id'";
-$statement = $conn -> prepare($sql);
-$statement->execute();
-$r = $statement->fetch();
+//$statement = $conn -> prepare($sql);
+//$statement->execute();
+//$r = $statement->fetch();
 $fname = $_SESSION['fname'];
 $lname = $_SESSION['lname'];
 $email = $_SESSION['email'];
+$type = $_SESSION['typeof'];
+$image = $_SESSION['profile_img'];
 
+
+
+//$result = $conn->query("SELECT profile_img FROM profiles WHERE id = $id");
+//
+//if($result->num_rows > 0) {
+//    $imgData = $result->fetch_assoc();
+//
+//    //Render image
+//    header("Content-type: image/jpg");
+//    $image = $imgData['image'];
+//}
 include "header.php";
 
 if (isset($_SESSION['SESS_MEMBER_ID'])) {
@@ -34,7 +47,7 @@ if (isset($_SESSION['SESS_MEMBER_ID'])) {
     <br>
     <div class="row">
       <div class="profile-left white">
-        <img class="rounded-circle profile-picture" src="images/TempProfile.jpg" alt="Tavish Profile Image" width="140" height="140">
+        <img class="rounded-circle profile-picture" src="getimage.php?id=<?php echo $id; ?>" alt="Tavish Profile Image" width="140" height="140">
         <h2><?php echo $fname; ?> <?php echo $lname; ?></h2>
         <p><?php echo $email; ?></p>
         <p><a class="btn btn-secondary" href="edit_profile.php?id=<?php echo $id; ?>" role="button">Edit Profile &raquo;</a></p>

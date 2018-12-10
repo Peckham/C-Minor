@@ -64,7 +64,7 @@
 
 <body>
 <?php include "header.php"; ?>
-<form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post">
+<form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post", enctype="multipart/form-data">
     <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
         <tr>
             <td colspan="2">
