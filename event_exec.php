@@ -20,7 +20,7 @@ $contact=$_POST['contact'];
 
 
 
-mysqli_query($bd, "INSERT INTO events(event_name, organization, event_date, event_time, location, contact)VALUES('$name', '$organization', '$date', '$time', '$location', '$contact')");
+mysqli_query($bd, "INSERT INTO events(event_name, organization, event_date, event_time, location, contact)VALUES('$event_name', '$organization', '$event_date', '$event_time', '$location', '$contact')");
 
 header("location: events.php?remarks=success");
 

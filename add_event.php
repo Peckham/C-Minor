@@ -53,7 +53,7 @@
         </tr>
         <tr>
             <td width="95"><div align="right">Event Name:</div></td>
-            <td width="171"><input type="text" name="name" required /></td>
+            <td width="171"><input type="text" name="event_name" required /></td>
         </tr>
         <tr>
             <td><div align="right">Organization:</div></td>

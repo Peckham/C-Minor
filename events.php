@@ -3,18 +3,19 @@ session_start();
 ?>
 
 <?php
-$mysql_hostname = "localhost";
-$mysql_user = "root";
-$mysql_password = "root";
-$mysql_database = "Database";
-$prefix = "";
-
-$conn = new mysqli($mysql_hostname, $mysql_user, $mysql_password, $mysql_database);
+//$mysql_hostname = "localhost";
+//$mysql_user = "root";
+//$mysql_password = "root";
+//$mysql_database = "Database";
+//$prefix = "";
+//
+//$conn = new mysqli($mysql_hostname, $mysql_user, $mysql_password, $mysql_database);
 $id=$_SESSION['SESS_MEMBER_ID'];
-$sql = "SELECT * FROM members where mem_id='$id'";
-$statement = $conn -> prepare($sql);
-$statement->execute();
-$r = $statement->fetch();
+//$sql = "SELECT * FROM members where mem_id='$id'";
+//$statement = $conn -> prepare($sql);
+//$statement->execute();
+//$r = $statement->fetch();
+
 
 
 include "header.php";
@@ -99,32 +100,25 @@ include "header.php";
     </div>
 
 
-    <?php
-    /**
-     * Created by PhpStorm.
-     * User: Hudson
-     * Date: 10/29/18
-     * Time: 5:28 PM
-     */
-    session_start();
+<?php
+try {
 
-    try {
-        require "config.php";
-        require "common.php";
 
-        $connection = new PDO($dsn, $username, $password, $options);
+    $connection = new PDO('mysql:host=localhost;dbname=Database', root, root);
 
-        $sql = "SELECT * FROM events";
+    $sql = "SELECT * FROM events";
 
-        $statement = $connection->prepare($sql);
-        $statement->execute();
+    $statement = $connection->prepare($sql);
+    $statement->execute();
 
-        $result = $statement->fetchAll();
+    $result = $statement->fetchAll();
 
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-    ?>
+} catch(PDOException $error) {
+    echo $sql . "<br>" . $error->getMessage();
+}
+
+
+?>
     
     <div class="card example-1 square scrollbar-cyan bordered-cyan">
       <div class="card-body">
@@ -201,7 +195,7 @@ include "header.php";
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 <!--    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>-->
 <!--    <script src="js/bootstrap.min.js"></script>-->
-<!--    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->-->
+<!--    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!--    <script src="js/ie10-viewport-bug-workaround.js"></script>-->
   </body>
 </html>

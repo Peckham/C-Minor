@@ -28,6 +28,7 @@ if(mysqli_num_rows($result) > 0){
         $email = $row['email'];
         $type = $row['typeof'];
         $image = $row['profile_img'];
+        $bio = $row['bio'];
     };
 };
 
