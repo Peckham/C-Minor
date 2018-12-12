@@ -84,6 +84,20 @@ echo "<script>window.location.href = \"add_event.php\";
             <td><div align="right">Contact:</div></td>
             <td><input type="text" name="contact" required /></td>
         </tr>
+        <tr>
+            <td><div align="right">Info:</div></td>
+            <td><input type="text" name="info" required /></td>
+        </tr>
+
+        <tr>
+            <td>
+                Select image to upload:
+            </td>
+            <td>
+                <input type="file" name="image"/>
+
+            </td>
+        </tr>
 
         <tr>
             <td><div align="right"></div></td>

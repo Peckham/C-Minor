@@ -68,6 +68,20 @@
             <td><div align="right">Website:</div></td>
             <td><input type="text" name="website" required /></td>
         </tr>
+        <tr>
+            <td><div align="right">Info:</div></td>
+            <td><input type="text" name="info" required /></td>
+        </tr>
+
+        <tr>
+            <td>
+                Select image to upload:
+            </td>
+            <td>
+                <input type="file" name="image"/>
+
+            </td>
+        </tr>
 
 
         <tr>
