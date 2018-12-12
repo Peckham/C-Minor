@@ -44,7 +44,7 @@ if (mysqli_num_rows($result) !== 0) {
 
 
 
-$password = password_hash($password, PASSWORD_DEFAULT, $options);
+$password = password_hash($password, PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO members(username, password, fname, lname, email, typeof)VALUES('$username', '$password', '$fname', '$lname', '$email', '$typeof')";
 $sql .= "INSERT INTO profiles(fname, lname, email, typeof)VALUES('$fname', '$lname', '$email', '$typeof')";
