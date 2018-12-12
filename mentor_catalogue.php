@@ -11,7 +11,7 @@ try {
     require "common.php";
     require "connection.php";
 
-    $sql = "SELECT fname, lname, email FROM members WHERE typeof = 'Mentor'";
+    $sql = "SELECT mem_id, fname, lname, email FROM members WHERE typeof = 'Mentor'";
 
     $statement = $connection->prepare($sql);
     $statement->execute();
