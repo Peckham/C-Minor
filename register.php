@@ -70,14 +70,14 @@ if (isset($_GET['remarks']) && $_GET['remarks']=='usertaken')
     echo "<script>alert('USERNAME IS TAKEN')</script>";
     echo "<script>window.location.href = \"register.php\";
 </script>";
-}
+};
 
-if (isset($_GET['remarks']) && $_GET['remarks']=='emailtaken')
+if ($_GET['remarks']=='emailtaken')
 {
     echo "<script>alert('EMAIL IS TAKEN')</script>";
     echo "<script>window.location.href = \"register.php\";
 </script>";
-}
+};
 ?>
 <form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post", enctype="multipart/form-data">
     <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">

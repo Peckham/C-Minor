@@ -22,18 +22,23 @@ $options = [
     'salt' => $salt
 ];
 
-$result = mysqli_query($bd, "SELECT username FROM members WHERE username=='{$username}'");
-
-if (mysqli_fetch_array($result)!==false) {
+$result = mysqli_query($bd, "SELECT username FROM members WHERE username ='{$username}'");
+//$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+//$result = $connection->query("SELECT username FROM members WHERE username=='{$username}'");
+if (mysqli_num_rows($result) !== 0) {
 
     $redirect_location = "register.php?remarks=usertaken";
+    header("location:".$redirect_location);
+    die();
 };
 
-$result2 = mysqli_query($bd, "SELECT email FROM members WHERE email=='{$username}'");
+$result2 = mysqli_query($bd, "SELECT email FROM members WHERE email='{$email}'");
 
-if (mysqli_fetch_array($result)!==false) {
+if (mysqli_fetch_array($result2)!==false) {
 
     $redirect_location = "register.php?remarks=emailtaken";
+    header("location:".$redirect_location);
+    die();
 };
 
 

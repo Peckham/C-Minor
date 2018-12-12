@@ -17,10 +17,15 @@ $event_date=$_POST['event_date'];
 $event_time=$_POST['event_time'];
 $location=$_POST['location'];
 $contact=$_POST['contact'];
+$info = $_POST['info'];
 
 $redirect_location = 'events.php';
 
-$result = mysqli_query($bd, "SELECT organization_name FROM organizations WHERE organization_name=='{$organization}'");
+$imgname = $_FILES['image']['name'];
+$image = $_FILES['image']['tmp_name'];
+$imgContent = addslashes(file_get_contents($image));
+
+$result = mysqli_query($bd, "SELECT organization_name FROM organizations WHERE organization_name='{$organization}'");
 
 if (mysqli_fetch_array($result)==false) {
     $redirect_location = "add_event.php?remarks=org";
@@ -28,7 +33,7 @@ if (mysqli_fetch_array($result)==false) {
     die();
 };
 
-mysqli_query($bd, "INSERT INTO events(event_name, organization, event_date, event_time, location, contact)VALUES('$event_name', '$organization', '$event_date', '$event_time', '$location', '$contact')");
+mysqli_query($bd, "INSERT INTO events(event_name, organization, event_date, event_time, location, contact, event_info)VALUES('$event_name', '$organization', '$event_date', '$event_time', '$location', '$contact', '$info')");
 
 header("location:".$redirect_location);
 
