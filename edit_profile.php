@@ -95,7 +95,7 @@
         <h2 class="center register-btn white center-text">Update Image</h2>
         <form action="edit_upload.php?id=<?php echo $_GET['id']; ?>" method="post" enctype="multipart/form-data">
         <div class="white">
-          <input type="file" name="myfile" />
+          <input type="file" name="image" />
         </div>
         </form>
         <h2 class="center register-btn white center-text">Edit Information</h2>
