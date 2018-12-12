@@ -109,7 +109,7 @@ if ($_GET['remarks']=='emailtaken')
                <input name="email" type="text" class="form-control" id="emailInput" placeholder="Email" required>
             </div>
             <div class="white">
-              <input type="file" name="myfile" />
+              <input type="file" name="image" />
             </div><br>
             <div align="left" class="white">
                 <input type="radio" name="typeof" value="Mentor">Mentor<br>

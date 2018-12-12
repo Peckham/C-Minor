@@ -15,6 +15,43 @@ $id=$_SESSION['SESS_MEMBER_ID'];
 //$statement = $conn -> prepare($sql);
 //$statement->execute();
 //$r = $statement->fetch();
+include ("connection.php");
+
+include ("hardcodeorg.php");
+$sql = "SELECT organization_id, organization_name FROM organizations WHERE organization_id='$org1'";
+
+$result1 = mysqli_query($bd, $sql);
+
+if(mysqli_num_rows($result1) > 0){
+    while($row = mysqli_fetch_assoc($result1)){
+        $orgid1 = $row['organization_id'];
+        $orgname1 = $row['organization_name'];
+
+    };
+};
+$sql = "SELECT organization_id, organization_name FROM organizations WHERE organization_id='$org2'";
+
+$result2 = mysqli_query($bd, $sql);
+
+if(mysqli_num_rows($result2) > 0){
+    while($row = mysqli_fetch_assoc($result2)){
+        $orgid2 = $row['organization_id'];
+        $orgname2= $row['organization_name'];
+
+    };
+};
+
+$sql = "SELECT organization_id, organization_name FROM organizations WHERE organization_id='$org3'";
+
+$result3 = mysqli_query($bd, $sql);
+
+if(mysqli_num_rows($result3) > 0){
+    while($row = mysqli_fetch_assoc($result3)){
+        $orgid3 = $row['organization_id'];
+        $orgname3 = $row['organization_name'];
+
+    };
+};
 
 
 
@@ -49,30 +86,30 @@ include "header.php";
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="images/TempCarousel0.jpg" alt="Black Girls Code">
+          <div class="carousel-item active" style="height:500px; width:700px; overflow:hidden;">
+            <img class="first-slide" src="getorgimage.php?id=<?php echo $org1; ?>" onerror="this.src='/images/default3.jpg'; this.style='margin: -200px 0 0 -150px;'" alt="Black Girls Code">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>Black Girls Code</h1>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
+                <h1><?php echo $orgname1 ?></h1>
+                <p><a class="btn btn-lg btn-primary" href="view_org.php?id=<?php echo $orgid1; ?>" role="button">Learn More</a></p>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img class="second-slide" src="images/TempCarousel1.jpg" alt="Black Googler Network">
+          <div class="carousel-item" style="height:500px; width:700px; overflow:hidden;">
+            <img class="second-slide"  src="getorgimage.php?=<?php echo $org2; ?>" onerror="this.src='/images/default3.jpg'; this.style='margin: -200px 0 0 -150px;'" alt="Black Googler Network">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>Black Googler Network</h1>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
+                <h1><?php echo $orgname2 ?></h1>
+                <p><a class="btn btn-lg btn-primary" href="view_org.php?id=<?php echo $orgid2; ?>" role="button">Learn More</a></p>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img class="third-slide" src="images/TempCarousel2.jpg" alt="Grace Hopper">
+          <div class="carousel-item" style="height:500px; width:700px; overflow:hidden;">
+            <img class="third-slide"  src="getorgimage.php?=<?php echo $org3; ?>" onerror="this.src='/images/default3.jpg'; this.style='margin: -200px 0 0 -150px;'" alt="Grace Hopper">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>AnitaB</h1>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
+                <h1><?php echo $orgname3 ?></h1>
+                <p><a class="btn btn-lg btn-primary" href="view_org.php?id=<?php echo $orgid3; ?>" role="button">Learn More</a></p>
               </div>
             </div>
           </div>
