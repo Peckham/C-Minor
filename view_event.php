@@ -36,7 +36,7 @@ if(!empty($_GET['id'])) {
 <br>
 <div class="row">
     <div class="profile-left white">
-        <img class="rounded-circle profile-picture" src="getimage.php?id=<?php echo $_GET['id']; ?>" onerror="this.src='/images/default2.png'" alt="Tavish Profile Image" width="140" height="140">
+        <img class="rounded-circle profile-picture" src="geteventimage.php?id=<?php echo $_GET['id']; ?>" onerror="this.src='/images/default2.png'" alt="Tavish Profile Image" width="140" height="140">
         <h2><?php echo $name; ?></h2>
         <h2><?php echo $organization; ?></h2>
         <p><?php echo $event_date; ?></p>
