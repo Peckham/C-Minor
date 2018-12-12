@@ -85,137 +85,65 @@
 //    ?>
 <!--</div>-->
 
-<body style="margin-left:2%">
 <?php include "header.php"; ?>
-    <h1>Edit Profile</h1>
+<br>
+    <h1 class="center-text white">Edit Profile</h1>
 
-    <h2>Image Upload</h2>
-
-    <form action="edit_upload.php?id=<?php echo $_GET['id']; ?>" method="post" enctype="multipart/form-data">
-        <input type="file" name="image">
-        <input type="submit" name="submit">
-    </form>
-
-    <h2>Edit Information</h2>
-
-    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
-      <table width = "600" border =" 0" cellspacing = "1"
-         cellpadding = "2">
-
-         <tr>
-            <td width = "100">First Name</td>
-            <td><input name = "fname" type = "text"
-               id = "fname"></td>
-         <td width = "100"></td>
-         <td>
-             <input name = "update" type = "submit"
-                    id = "update" value = "Update">
-         </td>
-         </tr>
-
-      </table>
-    </form>
-    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
-        <table width = "600" border =" 0" cellspacing = "1"
-               cellpadding = "2">
-
-            <tr>
-                <td width = "100">Last Name</td>
-                <td><input name = "lname" type = "text"
-                           id = "lname"></td>
-                <td width = "100"></td>
-                <td>
-                    <input name = "update" type = "submit"
-                           id = "update" value = "Update">
-                </td>
-            </tr>
-
-        </table>
-    </form>
-    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
-        <table width = "600" border =" 0" cellspacing = "1"
-               cellpadding = "2">
-
-            <tr>
-                <td width = "100">E-mail</td>
-                <td><input name = "email" type = "text"
-                           id = "lname"></td>
-                <td width = "100"></td>
-                <td>
-                    <input name = "update" type = "submit"
-                           id = "update" value = "Update">
-                </td>
-            </tr>
-
-        </table>
-    </form>
-    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
-        <table width = "600" border =" 0" cellspacing = "1"
-               cellpadding = "2">
-
-            <tr>
-                <td width = "100">Website</td>
-                <td><input name = "contact" type = "text"
-                           id = "lname"></td>
-                <td width = "100"></td>
-                <td>
-                    <input name = "update" type = "submit"
-                           id = "update" value = "Update">
-                </td>
-            </tr>
-
-        </table>
-    </form>
-    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
-        <table width = "600" border =" 0" cellspacing = "1"
-               cellpadding = "2">
-
-            <tr>
-                <td width = "100">Biography</td>
-                <td><textarea rows = "6" cols = "50" name = "bio" type = "text"
-                              id = "bio"></textarea></td>
-                <td width = "100"></td>
-                <td>
-                    <input name = "update" type = "submit"
-                           id = "update" value = "Update">
-                </td>
-            </tr>
-
-        </table>
-    </form>
-    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
-        <table width = "600" border =" 0" cellspacing = "1"
-               cellpadding = "2">
-
-            <tr>
-                <td width = "100">Major</td>
-                <td><input name = "major" type = "text"</td>
-                <td width = "100"></td>
-                <td>
-                    <input name = "update" type = "submit"
-                           id = "update" value = "Update">
-                </td>
-            </tr>
-
-        </table>
-    </form>
-    <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
-        <table width = "600" border =" 0" cellspacing = "1"
-               cellpadding = "2">
-
-            <tr>
-                <td width = "100">Interests</td>
-                <td><textarea rows = "4" cols = "50" name = "interests" type = "text"
-                              id = "interests"></textarea></td>
-                <td width = "100"></td>
-                <td>
-                    <input name = "update" type = "submit"
-                           id = "update" value = "Update">
-                </td>
-            </tr>
-
-        </table>
-    </form>
+    <div class="container edit-profile-container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="center register-btn white center-text">Update Image</h2>
+        <form action="edit_upload.php?id=<?php echo $_GET['id']; ?>" method="post" enctype="multipart/form-data">
+        <div class="white">
+          <input type="file" name="myfile" />
+        </div>
+        </form>
+        <h2 class="center register-btn white center-text">Edit Information</h2>
+        <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+            <div class="form-group">
+               <label class="sr-only" for="fnameInput">First Name</label>
+               <input name="fname" type="text" class="form-control" id="fnameInput" placeholder="First Name" required>
+                <input class="btn btn-secondary btn-block" name = "update" type = "submit" id = "update" value = "Update">
+            </div>
+        </form>
+        <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+            <div class="form-group">
+               <label class="sr-only" for="emailInput">Email</label>
+               <input name="email" type="text" class="form-control" id="emailInput" placeholder="Email" required>
+                <input class="btn btn-secondary btn-block" name = "update" type = "submit" id = "update" value = "Update">
+            </div>
+        </form>
+        <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+            <div class="form-group">
+               <label class="sr-only" for="websiteInput">Website</label>
+               <input name="website" type="text" class="form-control" id="websiteInput" placeholder="Website" required>
+                <input class="btn btn-secondary btn-block" name = "update" type = "submit" id = "update" value = "Update">
+            </div>
+        </form>
+        <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+            <div class="form-group">
+                <label class="sr-only" for="bioInput">Biography</label>
+                <input name="bio" type="text" class="form-control" id="bioInput" placeholder="Biography" required>
+                <input class="btn btn-secondary btn-block" name = "update" type = "submit" id = "update" value = "Update">
+            </div>
+        </form>
+        <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+            <div class="form-group">
+                <label class="sr-only" for="major">Major</label>
+                <input name="major" type="text" class="form-control" id="majorInput" placeholder="Major" required>
+                <input class="btn btn-secondary btn-block" name = "update" type = "submit" id = "update" value = "Update">
+            </div>
+        </form>
+        <form method = "post" action = "edit_info.php?id=<?php echo $_GET['id']; ?>" method="post">
+            <div class="form-group">
+                <label class="sr-only" for="interests">Interests</label>
+                <input name="interests" type="text" class="form-control" id="interestsInput" placeholder="Interests" required>
+                <input class="btn btn-secondary btn-block" name = "update" type = "submit" id = "update" value = "Update">
+            </div>
+        </form>
+    </div>
+</div>
+<br><br><br>
 
 <!---->
 <!--         <tr>-->
@@ -266,12 +194,12 @@
 <!--<form method="post">-->
 <!--    --><?php //foreach ($user as $key => $value) : ?>
 <!--        <label for="--><?php //echo $key; ?><!--">--><?php //echo ucfirst($key); ?><!--</label>-->
-<!--        <input type="text" name="--><?php //echo $key; ?><!--" id="--><?php //echo $key; ?><!--" value="--><?php //echo escape($value); ?><!--" --><?php //echo ($key === 'id' ? 'readonly' : null); ?><!-->-->
+<!--        <input type="text" name="--><?php //echo $key; ?><!--" id="--><?php //echo $key; ?><!--" value="--><?php //echo escape($value); ?><!--" --><?php //echo ($key === 'id' ? 'readonly' : null); ?><!---->
 <!--    --><?php //endforeach; ?>
 <!--    <input type="submit" name="submit" value="Submit">-->
 <!--</form>-->
 
-    <button><a href="profile.php">Back to Profile</a></button>
+    <button  class="btn btn-secondary btn-block"><a class="white" href="profile.php">Back to Profile</a></button>
 
 
 
