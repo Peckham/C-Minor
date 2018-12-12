@@ -9,8 +9,7 @@
 try {
     require "config.php";
     require "common.php";
-    require "c2.php";
-    $connection = new PDO('mysql:host=localhost;dbname=Database', root, root);
+    require "connection.php";
 
     $sql = "SELECT fname, lname, email FROM members WHERE typeof = 'Mentor'";
 

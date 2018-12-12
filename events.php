@@ -103,8 +103,7 @@ include "header.php";
 <?php
 try {
 
-
-    $connection = new PDO('mysql:host=localhost;dbname=Database', root, root);
+    require "connection.php";
 
     $sql = "SELECT * FROM events";
 
