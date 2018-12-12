@@ -24,15 +24,7 @@ include "header.php";
 <html lang="en">
 
     <div class="sidenav white">
-      <p class="searchEvents">Search Events/Clubs</p>
-      <div class="active-cyan-4 mb-4 searchEventsBar">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-      </div>
-      <p class="bodyText option"><a class="white" href="#">Near You</a></p>
-      <p class="bodyText option"><a class="white" href="#">Diversity Events</a></p>
-      <p class="bodyText option"><a class="white" href="#">Workshops</a></p>
-      <p class="bodyText option"><a class="white" href="#">Speakers</a></p>
-      <p class="bodyText option"><a class="white" href="#">Hackathons</a></p>
+      <br><br>
       <p class="bodyText option"><a class="white" href="all_events.php">See All Upcoming Events</a></p>
       <p class="bodyText option"><a class="white" href="Organizations.php">See All Organizations</a></p>
       <?php
