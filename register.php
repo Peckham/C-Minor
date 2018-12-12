@@ -103,7 +103,7 @@ if ($_GET['remarks']=='emailtaken')
         </tr>
         <tr>
             <td><div align="right">Password:</div></td>
-            <td><input type="text" name="password" /></td>
+            <td><input type="password" name="password" /></td>
         </tr>
         <tr>
             <td><div align="right">Confirm Password:</div></td>
