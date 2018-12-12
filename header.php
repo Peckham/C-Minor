@@ -63,7 +63,7 @@ session_start();
                     <a class="nav-link" href="events.php">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/phpBB3">Forum</a>
+                    <a class="nav-link" href="/phpBB3/install/app.php">Forum</a>
                 </li>
 
                 <?php
