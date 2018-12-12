@@ -56,4 +56,5 @@ if(!empty($_GET['id'])){
         echo 'Image not found...';
     }
 }
+
 ?>
