@@ -80,7 +80,7 @@
           </div>
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <a href="forums.php">
+              <a href="/forums">
                 <div class="features-icons-icon d-flex">
                   <i class="icon-note m-auto text-primary"></i>
                 </div>
