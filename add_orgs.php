@@ -33,6 +33,16 @@
 
 <body>
 <?php include "header.php"; ?>
+
+<?php
+if ($_GET['remarks']=='orgtaken')
+{
+    echo "<script>alert('ORGANIZATION ALREADY EXISTS')</script>";
+    echo "<script>window.location.href = \"add_org.php\";
+</script>";
+};
+
+?>
 <form name="reg" action="org_exec.php" onsubmit="return validateForm()" method="post">
     <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
         <tr>

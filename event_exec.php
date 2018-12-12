@@ -27,7 +27,7 @@ $imgContent = addslashes(file_get_contents($image));
 
 $result = mysqli_query($bd, "SELECT organization_name FROM organizations WHERE organization_name='{$organization}'");
 
-if (mysqli_fetch_array($result)==false) {
+if (mysqli_num_rows($result) == 0) {
     $redirect_location = "add_event.php?remarks=org";
     header("location:".$redirect_location);
     die();

@@ -34,7 +34,7 @@ if (mysqli_num_rows($result) !== 0) {
 
 $result2 = mysqli_query($bd, "SELECT email FROM members WHERE email='{$email}'");
 
-if (mysqli_fetch_array($result2)!==false) {
+if (mysqli_num_rows($result) !== 0) {
 
     $redirect_location = "register.php?remarks=emailtaken";
     header("location:".$redirect_location);
