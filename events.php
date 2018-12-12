@@ -33,8 +33,6 @@ include "header.php";
         <br>
         <p class="bodyText option"><a class="white" href="add_event.php">Add Event</a></p>
         <p class="bodyText option"><a class="white" href="add_orgs.php">Add Organization</a></p>
-        <p class="bodyText option"><a class="white" href="#">Apply for Spotlight</a></p>
-
         <?php
       }
       ?>

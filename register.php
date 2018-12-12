@@ -116,7 +116,7 @@ if ($_GET['remarks']=='emailtaken')
                 <input type="radio" name="typeof" value="Mentee">Mentee<br>
             </div><br>
             <div class="form-group register-btn">
-               <button type="submit" class="btn btn-success btn-block">Register</button>
+               <button type="submit" class="btn btn-secondary btn-block">Register</button>
             </div>
         </form>
     </div>

@@ -66,22 +66,6 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link" href="/forums">Forum</a>
                 </li>
-
-                <?php
-                if (isset($_SESSION['SESS_MEMBER_ID']) and $_SESSION['typeof'] == 'Mentor') {
-                ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mentor.php">Mentorship</a>
-                    </li>
-                <?php
-                } elseif (isset($_SESSION['SESS_MEMBER_ID']) and $_SESSION['typeof'] == 'Mentee') {
-                ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mentee.php">Mentorship</a>
-                    </li>
-                <?php
-                };
-                ?>
                 <li class="nav-item">
                     <a class="nav-link" href="mentor_catalogue.php">Mentor Catalogue</a>
                 </li>
@@ -118,7 +102,7 @@ session_start();
                                    <input name="password" type="password" class="form-control" id="passwordInput" placeholder="Password" required>
                                 </div>
                                 <div class="form-group">
-                                   <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                                   <button type="submit" class="btn btn-secondary btn-block">Sign in</button>
                                 </div>
                              </form>
                           </div>
