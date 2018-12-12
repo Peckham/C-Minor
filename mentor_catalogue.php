@@ -73,7 +73,7 @@ try {
             <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
               <div class="card">
                 <p></p>
-                <a href="#"><img class="card-img-top" src="getimage.php?id=<?php echo escape($row['mem_id']); ?>" alt=""></a>
+                <a href="#"><img class="card-img-top" src="getimage.php?id=<?php echo escape($row['mem_id']); ?>" onerror="this.src='/images/default2.png'" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#"><?php echo escape($row["fname"]);?> <?php echo escape($row["lname"]);?></a>
