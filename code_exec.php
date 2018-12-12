@@ -12,7 +12,7 @@ $lname=$_POST['lname'];
 $email=$_POST['email'];
 $typeof=$_POST['typeof'];
 
-$redirect_location = "login.php";
+$redirect_location = "index.php";
 
 $imgname = $_FILES['image']['name'];
 $image = $_FILES['image']['tmp_name'];

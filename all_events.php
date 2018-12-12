@@ -11,7 +11,7 @@ try {
     require "common.php";
     require "connection.php";
 
-    $sql = "SELECT organization_name, location, email FROM organizations";
+    $sql = "SELECT * FROM events";
 
     $statement = $connection->prepare($sql);
     $statement->execute();
@@ -55,7 +55,7 @@ try {
 </style>
 
 <div class="page-header header">
-    <h1>Organizations</h1>
+    <h1>Events</h1>
 </div>
 
 <div class="bodyText">
@@ -64,17 +64,21 @@ try {
         <tr>
             <!-- <th>#</th> -->
             <th>Name</th>
+            <th>Organization</th>
+            <th>Date</th>
+            <th>Time</th>
             <th>Location</th>
-            <th>Email Address</th>
         </tr>
         </thead>
         <tbody>
         <?php foreach ($result as $row) : ?>
             <tr>
                 <!-- <td><?php echo escape($row["id"]); ?></td> -->
-                <td><?php echo escape($row["organization_name"]); ?></td>
+                <td><a href="view_event.php?id=<?php echo escape($row['event_id']); ?>"><?php echo escape($row["event_name"]); ?></a></td>
+                <td><?php echo escape($row["organization"]); ?></td>
+                <td><?php echo escape($row["event_date"]); ?></td>
+                <td><?php echo escape($row["event_time"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
-                <td><?php echo escape($row["email"]); ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

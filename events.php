@@ -33,7 +33,7 @@ include "header.php";
       <p class="bodyText option"><a class="white" href="#">Workshops</a></p>
       <p class="bodyText option"><a class="white" href="#">Speakers</a></p>
       <p class="bodyText option"><a class="white" href="#">Hackathons</a></p>
-      <p class="bodyText option"><a class="white" href="#">See All Upcoming Events</a></p>
+      <p class="bodyText option"><a class="white" href="all_events.php">See All Upcoming Events</a></p>
       <p class="bodyText option"><a class="white" href="Organizations.php">See All Organizations</a></p>
       <?php
       if (isset($_SESSION['SESS_MEMBER_ID'])) {
@@ -123,63 +123,20 @@ try {
       <div class="card-body">
         <h1 class="upcomingEvents"><strong>Upcoming Events</strong></h1>
         <div class="bodyText">
-          <div class="eventTitleCol">
+          <table id = 'table1' style="width:100%; border-spacing: 5px;">
+              <tr>
+                  <th>Event Name</th>
+                  <th align="right">Event Info</th>
+              </tr>
               <?php foreach ($result as $row) : ?>
                   <tr>
                       <td><?php echo $row["event_name"]; ?></td>
-                      <td><?php echo $row["organization"]; ?></td>
-
-                  </tr>
-              <?php endforeach; ?>
-
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-            <p>Filler</p>
-          </div>
-          <div class="timeCol">
-              <?php foreach ($result as $row) : ?>
-                  <tr>
                       <td><?php echo $row["event_date"]; ?></td>
-                      <td><?php echo $row["event_time"]; ?></td>
-                      <br>
-                      <td>Room: <?php echo $row["location"]; ?></td>
-                      <br>
 
                   </tr>
               <?php endforeach; ?>
+          </table>
 
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-            <p>Room Time</p>
-          </div>
         </div>
       </div>
     </div>
