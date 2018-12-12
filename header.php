@@ -101,9 +101,27 @@ session_start();
 
             <?php
             } else {?>
-
-                <a href="login.php" class="btn btn-secondary btn-sm" role="button">Log In</a>
-                <a href="register.php" class="btn btn-secondary btn-sm" role="button">Register</a>
+                <a href="register.php" class="btn btn-secondary btn-sm top-right-buttons" value="Log In" role="button">Register</a>
+                <a href="http://www.jquery2dotnet.com" class="dropdown-toggle btn btn-secondary btn-sm top-right-buttons" data-toggle="dropdown">Login<b class="caret"></b></a>
+                 <ul class="dropdown-menu dropdown-menu-right" style="padding: 15px;min-width: 250px;">
+                    <li>
+                       <div class="row">
+                          <div class="col-md-12">
+                             <form class="form" role="form" method="post" action="login_exec.php" accept-charset="UTF-8" id="login-nav">
+                                <div class="form-group">
+                                   <label class="sr-only" for="usernameInput">Username</label>
+                                   <input name="username" type="username" class="form-control" id="usernameInput" placeholder="Username" required>
+                                </div>
+                                <div class="form-group">
+                                   <label class="sr-only" for="passwordInput">Password</label>
+                                   <input name="password" type="password" class="form-control" id="passwordInput" placeholder="Password" required>
+                                </div>
+                                <div class="form-group">
+                                   <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                                </div>
+                             </form>
+                          </div>
+                       </div>
 
             <?php
             }?>
