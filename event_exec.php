@@ -18,11 +18,19 @@ $event_time=$_POST['event_time'];
 $location=$_POST['location'];
 $contact=$_POST['contact'];
 
+$redirect_location = 'events.php';
 
+$result = mysqli_query($bd, "SELECT organization_name FROM organizations WHERE organization_name=='{$organization}'");
+
+if (mysqli_fetch_array($result)==false) {
+    $redirect_location = "add_event.php?remarks=org";
+    header("location:".$redirect_location);
+    die();
+};
 
 mysqli_query($bd, "INSERT INTO events(event_name, organization, event_date, event_time, location, contact)VALUES('$event_name', '$organization', '$event_date', '$event_time', '$location', '$contact')");
 
-header("location: events.php?remarks=success");
+header("location:".$redirect_location);
 
 mysqli_close($con);
 ?>
