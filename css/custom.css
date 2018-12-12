@@ -415,3 +415,24 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+/**
+CATALOGUE -------------------------------------------------------------*/
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.pagination {
+  margin-bottom: 30px;
+}
+
+.card-height {
+  max-height:20%;
+}
