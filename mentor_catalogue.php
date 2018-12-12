@@ -76,7 +76,7 @@ try {
                 <a href="#"><img class="card-img-top" src="getimage.php?id=<?php echo escape($row['mem_id']); ?>" onerror="this.src='/images/default2.png'" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#"><?php echo escape($row["fname"]);?> <?php echo escape($row["lname"]);?></a>
+                    <a href="view_profile.php?id=<?php echo escape($row['mem_id']); ?>"><?php echo escape($row["fname"]);?> <?php echo escape($row["lname"]);?></a>
                   </h4>
                   <p class="card-text"><?php echo escape($row["email"]); ?></p>
                   <p class="card-text"><?php echo escape($row["bio"]); ?></p>
