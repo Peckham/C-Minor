@@ -26,14 +26,14 @@
 //    $image_content=$row["profile_img"];
 //}
 //echo $image;
-
+include ("connection.php");
 
 if(!empty($_GET['id'])){
     //DB details
-    $dbHost     = 'localhost';
-    $dbUsername = 'root';
-    $dbPassword = 'root';
-    $dbName     = 'Database';
+    $dbHost     = $mysql_hostname;
+    $dbUsername = $mysql_user;
+    $dbPassword = $mysql_password;
+    $dbName     = $mysql_database;
 
     //Create connection and select DB
     $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
