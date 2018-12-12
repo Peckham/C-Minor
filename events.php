@@ -105,7 +105,7 @@ try {
 
     require "connection.php";
 
-    $sql = "SELECT * FROM events";
+    $sql = "SELECT event_name, organization, event_date, event_time, location FROM events WHERE event_id < 100";
 
     $statement = $connection->prepare($sql);
     $statement->execute();
@@ -126,12 +126,9 @@ try {
           <div class="eventTitleCol">
               <?php foreach ($result as $row) : ?>
                   <tr>
-                      <!-- <td><?php echo escape($row["id"]); ?></td> -->
-                      <td><?php echo escape($row["event_name"]); ?></td>
-                      <td><?php echo escape($row["organization"]); ?></td>
-                      <br>
-                      <br>
-                      <br>
+                      <td><?php echo $row["event_name"]; ?></td>
+                      <td><?php echo $row["organization"]; ?></td>
+
                   </tr>
               <?php endforeach; ?>
 
@@ -156,11 +153,10 @@ try {
           <div class="timeCol">
               <?php foreach ($result as $row) : ?>
                   <tr>
-                      <!-- <td><?php echo escape($row["id"]); ?></td> -->
-                      <td><?php echo escape($row["event_date"]); ?></td>
-                      <td><?php echo escape($row["event_time"]); ?></td>
+                      <td><?php echo $row["event_date"]; ?></td>
+                      <td><?php echo $row["event_time"]; ?></td>
                       <br>
-                      <td>Room: <?php echo escape($row["location"]); ?></td>
+                      <td>Room: <?php echo $row["location"]; ?></td>
                       <br>
 
                   </tr>
@@ -188,13 +184,5 @@ try {
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-<!--    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>-->
-<!--    <script src="js/bootstrap.min.js"></script>-->
-<!--    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<!--    <script src="js/ie10-viewport-bug-workaround.js"></script>-->
   </body>
 </html>
