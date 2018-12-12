@@ -34,13 +34,13 @@ include "header.php";
       <p class="bodyText option"><a class="white" href="#">Speakers</a></p>
       <p class="bodyText option"><a class="white" href="#">Hackathons</a></p>
       <p class="bodyText option"><a class="white" href="#">See All Upcoming Events</a></p>
-      <p class="bodyText option"><a class="white" href="#">See All Organizations</a></p>
+      <p class="bodyText option"><a class="white" href="Organizations.php">See All Organizations</a></p>
       <?php
       if (isset($_SESSION['SESS_MEMBER_ID'])) {
         ?>
         <br>
         <p class="bodyText option"><a class="white" href="add_event.php">Add Event</a></p>
-        <p class="bodyText option"><a class="white" href="#">Add Organization</a></p>
+        <p class="bodyText option"><a class="white" href="add_orgs.php">Add Organization</a></p>
         <p class="bodyText option"><a class="white" href="#">Apply for Spotlight</a></p>
 
         <?php

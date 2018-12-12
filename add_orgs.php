@@ -14,7 +14,7 @@
 
     function validateForm()
     {
-        var fields = ["event_name", "organization", "event_date", "event_time", "location", "contact"]
+        var fields = ["organization", "location", "email", "website"];
 
         var i, l = fields.length;
         var fieldname;
@@ -33,15 +33,7 @@
 
 <body>
 <?php include "header.php"; ?>
-<?php
-if (isset($_GET['remarks']) && $_GET['remarks']=='org')
-{
-echo "<script>alert('ORGANIZATION DOES NOT EXIST')</script>";
-echo "<script>window.location.href = \"add_event.php\";
-</script>";
-}
-?>
-<form name="reg" action="event_exec.php" onsubmit="return validateForm()" method="post">
+<form name="reg" action="org_exec.php" onsubmit="return validateForm()" method="post">
     <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
         <tr>
             <td colspan="2">
@@ -50,40 +42,33 @@ echo "<script>window.location.href = \"add_event.php\";
                     // $remarks=$_GET['remarks'];
                     if (!isset($_GET['remarks']))
                     {
-                        echo 'Add Your Event Here';
+                        echo 'Add Your Organization Here';
                     }
                     if (isset($_GET['remarks']) && $_GET['remarks']=='success')
                     {
-                        echo 'Event Successfully Added';
+                        echo 'Organization Successfully Added';
                     }
                     ?>
                 </div></td>
         </tr>
         <tr>
-            <td width="95"><div align="right">Event Name:</div></td>
-            <td width="171"><input type="text" name="event_name" required /></td>
-        </tr>
-        <tr>
             <td><div align="right">Organization:</div></td>
-            <td><input type="text" name="organization" required /></td>
+            <td><input type="text" name="organization_name" required /></td>
         </tr>
 
-        <tr>
-            <td><div align="right">Date:</div></td>
-            <td><input type="date" name="event_date" required /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Time:</div></td>
-            <td><input type="time" name="event_time" required /></td>
-        </tr>
         <tr>
             <td><div align="right">Location:</div></td>
             <td><input type="text" name="location" required /></td>
         </tr>
         <tr>
-            <td><div align="right">Contact:</div></td>
-            <td><input type="text" name="contact" required /></td>
+            <td><div align="right">E-mail:</div></td>
+            <td><input type="email" name="email" required /></td>
         </tr>
+        <tr>
+            <td><div align="right">Website:</div></td>
+            <td><input type="text" name="website" required /></td>
+        </tr>
+
 
         <tr>
             <td><div align="right"></div></td>
