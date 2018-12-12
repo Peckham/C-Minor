@@ -11,7 +11,7 @@ try {
     require "common.php";
     require "connection.php";
 
-    $sql = "SELECT organization_name, location, email FROM organizations";
+    $sql = "SELECT organization_id, organization_name, location, email FROM organizations";
 
     $statement = $connection->prepare($sql);
     $statement->execute();
@@ -72,7 +72,7 @@ try {
         <?php foreach ($result as $row) : ?>
             <tr>
                 <!-- <td><?php echo escape($row["id"]); ?></td> -->
-                <td><?php echo escape($row["organization_name"]); ?></td>
+                <td><a href="view_org.php?id=<?php echo escape($row['organization_id']); ?>"><?php echo escape($row["organization_name"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["email"]); ?></td>
             </tr>

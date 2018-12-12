@@ -46,7 +46,7 @@ echo "<script>window.location.href = \"add_event.php\";
 <h1 class="center register-btn white">Add Event</h1>
     <div class="row">
       <div class="col-md-12">
-        <form name="reg" action="event_exec.php" onsubmit="return validateForm()" method="post">
+        <form name="reg" action="event_exec.php" onsubmit="return validateForm()" method="post", enctype="multipart/form-data">
             <div class="form-group">
                <label class="sr-only" for="eventNameInput">Event Name</label>
                <input name="event_name" type="text" class="form-control" id="eventNameInput" placeholder="Event Name" required>
@@ -76,7 +76,7 @@ echo "<script>window.location.href = \"add_event.php\";
                <input name="info" type="text" class="form-control" id="infoInput" placeholder="Info" required>
             </div>
             <div class="white">
-              <input type="file" name="myfile" />
+              <input type="file" name="image" />
             </div><br>
             <div class="form-group register-btn">
                <button type="submit" class="btn btn-success btn-block">Add Event</button>

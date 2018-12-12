@@ -48,7 +48,7 @@ if ($_GET['remarks']=='orgtaken')
 <h1 class="center register-btn white">Add Organization</h1>
     <div class="row">
       <div class="col-md-12">
-        <form name="reg" action="org_exec.php" onsubmit="return validateForm()" method="post">
+        <form name="reg" action="org_exec.php" onsubmit="return validateForm()" method="post", enctype="multipart/form-data">
             <div class="form-group">
                <label class="sr-only" for="orgNameInput">Organization Name</label>
                <input name="organization_name" type="text" class="form-control" id="orgNameInput" placeholder="Organization Name" required>
@@ -70,7 +70,7 @@ if ($_GET['remarks']=='orgtaken')
                <input name="info" type="text" class="form-control" id="infoInput" placeholder="Info" required>
             </div>
             <div class="white">
-              <input type="file" name="myfile" />
+              <input type="file" name="image" />
             </div><br>
             <div class="form-group register-btn">
                <button type="submit" class="btn btn-success btn-block">Add Organization</button>
