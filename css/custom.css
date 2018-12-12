@@ -440,3 +440,33 @@ CATALOGUE -------------------------------------------------------------*/
 .card-height {
   max-height:20%;
 }
+
+/**
+REGISTER --------------------------------------------------------*/
+
+.register-container {
+  max-width:20%;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.register-btn {
+  padding-top:16px;
+  padding-bottom:32px;
+}
+
+.center-text {
+  text-align: center;
+}

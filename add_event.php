@@ -41,71 +41,49 @@ echo "<script>window.location.href = \"add_event.php\";
 </script>";
 }
 ?>
-<form name="reg" action="event_exec.php" onsubmit="return validateForm()" method="post">
-    <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
-        <tr>
-            <td colspan="2">
-                <div align="center">
-                    <?php
-                    // $remarks=$_GET['remarks'];
-                    if (!isset($_GET['remarks']))
-                    {
-                        echo 'Add Your Event Here';
-                    }
-                    if (isset($_GET['remarks']) && $_GET['remarks']=='success')
-                    {
-                        echo 'Event Successfully Added';
-                    }
-                    ?>
-                </div></td>
-        </tr>
-        <tr>
-            <td width="95"><div align="right">Event Name:</div></td>
-            <td width="171"><input type="text" name="event_name" required /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Organization:</div></td>
-            <td><input type="text" name="organization" required /></td>
-        </tr>
 
-        <tr>
-            <td><div align="right">Date:</div></td>
-            <td><input type="date" name="event_date" required /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Time:</div></td>
-            <td><input type="time" name="event_time" required /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Location:</div></td>
-            <td><input type="text" name="location" required /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Contact:</div></td>
-            <td><input type="text" name="contact" required /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Info:</div></td>
-            <td><input type="text" name="info" required /></td>
-        </tr>
+<div class="container register-container">
+<h1 class="center register-btn white">Add Event</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <form name="reg" action="event_exec.php" onsubmit="return validateForm()" method="post">
+            <div class="form-group">
+               <label class="sr-only" for="eventNameInput">Event Name</label>
+               <input name="event_name" type="text" class="form-control" id="eventNameInput" placeholder="Event Name" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="organizationInput">Organization</label>
+               <input name="organization" type="text" class="form-control" id="organizationInput" placeholder="Organization" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="dateInput">Date</label>
+               <input name="event_date" type="date" class="form-control" id="dateInput" placeholder="Event Date" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="timeInput">Time</label>
+               <input name="event_time" type="time" class="form-control" id="timeInput" placeholder="Event Time" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="locationInput">Location</label>
+               <input name="location" type="text" class="form-control" id="locationInput" placeholder="Location" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="contactInput">Contact</label>
+               <input name="contact" type="text" class="form-control" id="contactInput" placeholder="Contact" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="infoInput">Info</label>
+               <input name="info" type="text" class="form-control" id="infoInput" placeholder="Info" required>
+            </div>
+            <div class="white">
+              <input type="file" name="myfile" />
+            </div><br>
+            <div class="form-group register-btn">
+               <button type="submit" class="btn btn-success btn-block">Add Event</button>
+            </div>
+        </form>
+    </div>
+</div>
 
-        <tr>
-            <td>
-                Select image to upload:
-            </td>
-            <td>
-                <input type="file" name="image"/>
-
-            </td>
-        </tr>
-
-        <tr>
-            <td><div align="right"></div></td>
-            <td><input name="submit" type="submit" value="Submit" /></td>
-        </tr>
-    </table>
-</form>
-
-<a class = 'bu' href="events.php"><button>Previous Page</button></a>
 </body>
 </html>

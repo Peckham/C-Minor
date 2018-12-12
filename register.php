@@ -79,75 +79,48 @@ if ($_GET['remarks']=='emailtaken')
 </script>";
 };
 ?>
-<form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post", enctype="multipart/form-data">
-    <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
-        <tr>
-            <td colspan="2">
-                <div align="center">
-                    <?php
-                    // $remarks=$_GET['remarks'];
-                    if (!isset($_GET['remarks']))
-                    {
-                        echo 'Register Here';
-                    }
-                    if (isset($_GET['remarks']) && $_GET['remarks']=='success')
-                    {
-                        echo 'Registration Success';
-                    }
-                    ?>
-                </div></td>
-        </tr>
-        <tr>
-            <td><div align="right">Username:</div></td>
-            <td><input type="text" name="username" /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Password:</div></td>
-            <td><input type="password" name="password" /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Confirm Password:</div></td>
-            <td><input type="password" name="password2" /></td>
-        </tr>
-        <tr>
-            <td width="95"><div align="right">First Name:</div></td>
-            <td width="171"><input type="text" name="fname" /></td>
+<div class="container register-container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="center register-btn white center-text">Register</h1>
+        <form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post", enctype="multipart/form-data">
+            <div class="form-group">
+               <label class="sr-only" for="usernameInput">Username</label>
+               <input name="username" type="text" class="form-control" id="usernameInput" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="passwordInput">Password</label>
+               <input name="password" type="password" class="form-control" id="passwordInput" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="password2Input">Confirm Password</label>
+               <input name="password2" type="password" class="form-control" id="password2Input" placeholder="Confirm Password" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="fnameInput">First Name</label>
+               <input name="fname" type="text" class="form-control" id="fnameInput" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="lnameInput">Last Name</label>
+               <input name="lname" type="text" class="form-control" id="lnameInput" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="emailInput">Email</label>
+               <input name="email" type="text" class="form-control" id="emailInput" placeholder="Email" required>
+            </div>
+            <div class="white">
+              <input type="file" name="myfile" />
+            </div><br>
+            <div align="left" class="white">
+                <input type="radio" name="typeof" value="Mentor">Mentor<br>
+                <input type="radio" name="typeof" value="Mentee">Mentee<br>
+            </div><br>
+            <div class="form-group register-btn">
+               <button type="submit" class="btn btn-success btn-block">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
 
-        </tr>
-        <tr>
-            <td><div align="right">Last Name:</div></td>
-            <td><input type="text" name="lname" /></td>
-        </tr>
-
-        <tr>
-            <td><div align="right">Email:</div></td>
-            <td><input type="email" name="email" /></td>
-        </tr>
-        <tr>
-            <td>
-                Select image to upload:
-            </td>
-            <td>
-                <input type="file" name="image"/>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div align="left">
-
-                    <input type="radio" name="typeof" value="Mentor">Mentor<br>
-                    <input type="radio" name="typeof" value="Mentee">Mentee<br>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><div align="right"></div></td>
-            <td><input name="submit" type="submit" value="Submit" /></td>
-        </tr>
-    </table>
-</form>
-
-<a class = 'bu' href="login.php"><button>Login</button></a>
 </body>
 </html>

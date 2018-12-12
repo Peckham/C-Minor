@@ -43,63 +43,41 @@ if ($_GET['remarks']=='orgtaken')
 };
 
 ?>
-<form name="reg" action="org_exec.php" onsubmit="return validateForm()" method="post">
-    <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
-        <tr>
-            <td colspan="2">
-                <div align="center">
-                    <?php
-                    // $remarks=$_GET['remarks'];
-                    if (!isset($_GET['remarks']))
-                    {
-                        echo 'Add Your Organization Here';
-                    }
-                    if (isset($_GET['remarks']) && $_GET['remarks']=='success')
-                    {
-                        echo 'Organization Successfully Added';
-                    }
-                    ?>
-                </div></td>
-        </tr>
-        <tr>
-            <td><div align="right">Organization:</div></td>
-            <td><input type="text" name="organization_name" required /></td>
-        </tr>
 
-        <tr>
-            <td><div align="right">Location:</div></td>
-            <td><input type="text" name="location" required /></td>
-        </tr>
-        <tr>
-            <td><div align="right">E-mail:</div></td>
-            <td><input type="email" name="email" required /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Website:</div></td>
-            <td><input type="text" name="website" required /></td>
-        </tr>
-        <tr>
-            <td><div align="right">Info:</div></td>
-            <td><input type="text" name="info" required /></td>
-        </tr>
-
-        <tr>
-            <td>
-                Select image to upload:
-            </td>
-            <td>
-                <input type="file" name="image"/>
-
-            </td>
-        </tr>
-
-
-        <tr>
-            <td><div align="right"></div></td>
-            <td><input name="submit" type="submit" value="Submit" /></td>
-        </tr>
-    </table>
-</form>
+<div class="container register-container">
+<h1 class="center register-btn white">Add Organization</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <form name="reg" action="org_exec.php" onsubmit="return validateForm()" method="post">
+            <div class="form-group">
+               <label class="sr-only" for="orgNameInput">Organization Name</label>
+               <input name="organization_name" type="text" class="form-control" id="orgNameInput" placeholder="Organization Name" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="locationInput">Location</label>
+               <input name="location" type="text" class="form-control" id="locationInput" placeholder="Location" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="emailInput">Email</label>
+               <input name="email" type="text" class="form-control" id="emailInput" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="websiteInput">Website</label>
+               <input name="website" type="text" class="form-control" id="websiteInput" placeholder="Website" required>
+            </div>
+            <div class="form-group">
+               <label class="sr-only" for="infoInput">Info</label>
+               <input name="info" type="text" class="form-control" id="infoInput" placeholder="Info" required>
+            </div>
+            <div class="white">
+              <input type="file" name="myfile" />
+            </div><br>
+            <div class="form-group register-btn">
+               <button type="submit" class="btn btn-success btn-block">Add Organization</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 <a class = 'bu' href="events.php"><button>Previous Page</button></a>
 </body>

@@ -102,6 +102,7 @@ session_start();
             <?php
             } else {?>
                 <a href="register.php" class="btn btn-secondary btn-sm top-right-buttons" value="Log In" role="button">Register</a>
+
                 <a href="http://www.jquery2dotnet.com" class="dropdown-toggle btn btn-secondary btn-sm top-right-buttons" data-toggle="dropdown">Login<b class="caret"></b></a>
                  <ul class="dropdown-menu dropdown-menu-right" style="padding: 15px;min-width: 250px;">
                     <li>
