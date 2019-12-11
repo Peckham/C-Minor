@@ -1493,16 +1493,16 @@
         },
         {
             "name": "symfony/proxy-manager-bridge",
-            "version": "v2.8.46",
+            "version": "v2.8.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/proxy-manager-bridge.git",
-                "reference": "0fd7ab039e26a33c5e3d1e00642bc83412c0896a"
+                "reference": "40802595fea26ada845ed58124d8000a13dd4c6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/proxy-manager-bridge/zipball/0fd7ab039e26a33c5e3d1e00642bc83412c0896a",
-                "reference": "0fd7ab039e26a33c5e3d1e00642bc83412c0896a",
+                "url": "https://api.github.com/repos/symfony/proxy-manager-bridge/zipball/40802595fea26ada845ed58124d8000a13dd4c6f",
+                "reference": "40802595fea26ada845ed58124d8000a13dd4c6f",
                 "shasum": ""
             },
             "require": {
@@ -1543,7 +1543,7 @@
             ],
             "description": "Symfony ProxyManager Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T09:03:18+00:00"
+            "time": "2019-04-16T11:33:46+00:00"
         },
         {
             "name": "symfony/routing",
